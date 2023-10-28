@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Axiom VIP ajax</title>
+    <link rel="icon" href="../Images/guru.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+      />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="countrystatecity.js?v2"></script>
+      <script lang="javascript" src="countrystatecitydropdown.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inria+Sans&display=swap"
+    />
+    <script lang="javascript" src="validatiologin.js"></script>
+    <!-- <link href="style.css" rel="stylesheet"> -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .bg-color-blue {
+        background-color: #004080;
+      }
+
+      .color-blue {
+        color: #004080;
+      }
+
+      .login:hover {
+        text-shadow: 0px 10px 5px rgba(35, 35, 35, 0.616);
+        box-shadow: 0px 1px 5px 5px rgba(97, 97, 97, 0.37);
+      }
+      .client-img:hover {
+        transform: scale(1.1);
+        z-index: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NavBar Start -->
+
+    <nav
+      class="navbar position-fixed w-100 pt-3 fixed-top"
+      style="
+        background: rgb(255, 255, 255);
+        box-shadow: 0px 10px 15px 0px rgba(0, 117, 255, 0.26);
+        z-index: 10;
+      "
+    >
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="../Images/Axiom_VIP_logo.png"
+            alt="Axiom"
+            width="100"
+            height="55"
+          />
+        </a>
+          <button data-bs-toggle="modal" data-bs-target="#ModalLog" class="login btn ps-4 pe-4 text-white fs-5 pt-1 pb-1"
+            style="background-color: #004080; font-family: Inria Sans" type="submit"> Login </button>
+          </div>
+    </nav>
+
+<!-- Modal Start Of Login form -->
+<div class="modal fade " id="ModalLog" tabindex="-1" aria-labelledby="modallabel-log" aria-hidden="true">
+	<div class="modal-dialog shadow">
+	  <div class="modal-content">
+		<div class="">
+		  <h1 class="" id="modallabel"></h1>
+		  <button type="button" class="btn-close float-end me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body container py-5">
+				<div class="row  text-center justify-content-center">
+					<div class="col-md-6 rounded-3 w-75">
+						<div class="img-fluid ">
+							<img style="width: 100px" src="./Images/Axiom_VIP_logo.png" alt="">
+						</div>
+						<div>
+							<h1 class="fs-5">“Use Your Axiom VIP Account”</h1>
+								<hr class=" mt-4 text-dark">
+							<div class="card-body">
+								<form class="" action="../Home Page/home.html" onsubmit="return validateForm()"  >
+									<h4 class="mt-5">Log In</h4>
+									<div class="d-flex shadow-sm mt-5">
+									  <img src="../Images/user.png" class="img img-fluid p-2 border border-2 border-end-0" alt="" >
+										<div class="d-flex pt-1" style="height: 2.4rem;">
+											<div class="vr"></div>
+										  </div>
+										<input type="text" id="username" value="" name="username" class="form-control py-2 border border-2 border-start-0 rounded-0" placeholder="someone@gmail.com" >
+									</div> 
+									<p id="error1" class="text-danger float-start ps-5 mb-0"></p>
+									<div class="d-flex mt-5 shadow-sm">
+											<img src="../Images/password.png" class="img img-fluid p-2 border border-2 border-end-0" alt="" >
+										<div class="d-flex pt-1" style="height: 2.4rem;">
+											<div class="vr"></div>
+										  </div>
+										<input type="password" id="password" name="Password" value="" class="form-control py-2 border border-2 border-start-0 rounded-0" placeholder="Enter Password" >
+									</div> 
+									<p id="error2" class="text-danger ps-5 my-2 float-start "></p>
+									<div class="d-flex justify-content-between mt-5">
+										<div class="mb-3 form-check">
+											<input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
+											<label class="form-check-label" for="rememberMe">Remember Me</label>
+										</div>
+										<div >
+											<a data-bs-toggle="modal" data-bs-target="#ModalReset" href="#">Forgot Password?</a>
+										</div>
+									</div>
+								<div class="d-flex flex-column justify-content-center">
+									<a href="./Home Page/home.html"> <button type="submit"  class=" btn text-white mx-auto my-3" onclick="validateForm()"  style=" background-color: #004080;">Log In</button></a>
+								</div>
+								<div class="card-footer mt-2">
+									No Account Yet? <span style="cursor: pointer; color: #004080; text-decoration: underline;" data-bs-toggle="modal" data-bs-target="#ModalReg">Register Now</span>
+								</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  
+    <!-- validation code end -->
+  <!-- Modal End Of Login form -->
+
+  <!-- Modal Start Of Registration form -->
+  <!-- validation on registration page start -->
+<div class="modal fade" id="ModalReg" tabindex="-1" aria-labelledby="modallabel-reg" aria-hidden="true">
+	<div class="modal-dialog modal-xl">
+	  <div class="modal-content">
+		<div class="">
+		  <h1 class=" fs-5" id="modallabel-reg"></h1>
+		  <button type="button" class="btn-close float-end me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body container">
+				<div class="rounded-3">
+					<h2 class="text-center" style="color: #004080;">Registration Form</h2>
+					<form id="registrationForm" name="stud_form"  class="my-4 px-3" onsubmit="return RegisterForm()">
+						<!-- Personal Information Section -->
+						<h4 class="text-center text-decoration-underline my-2">Personal Information</h4>
+						<div class="row mt-4 my-3">
+							<div class="col-md-6 col-lg-6 col-sm-12">
+								<div class="form-group">
+									<label class="form-label" for="firstName">First Name</label>&nbsp;<span class="text-danger">*</span>
+									<input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name" >
+								</div>
+								<p id="msg1" class="text-danger"></p>
+							</div>
+							<div class="col-md-6 col-lg-6 col-sm-12">
+								<div class="form-group">
+									<label class="form-label" for="lastName">Last Name</label>&nbsp;<span class="text-danger">*</span>
+									<input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name" >
+								</div>
+								<p id="msg2" class="text-danger"></p>
+
+							</div>
+						</div>
+						<div class="form-group d-flex w-50  ">
+							<label class="form-label me-2">Gender</label>&nbsp;<span class="text-danger">*</span>
+							<div class="form-check mx-auto me-2">
+								<input class="form-check-input " type="radio" name="gender" id="male" value="male" >
+								<label class="form-check-label" for="male">Male</label>
+							</div>
+							<div class="form-check mx-auto me-2">
+								<input class="form-check-input" type="radio" name="gender" id="female" value="female" >
+								<label class="form-check-label" for="female">Female</label>
+							</div>
+							<div class="form-check mx-auto me-2">
+								<input class="form-check-input" type="radio" name="gender" id="other" value="other" >
+								<label class="form-check-label" for="other">Other</label>
+							</div>
+						</div>
+						<p id="msg3" class="text-danger"></p>
+						<div class="row my-3">
+							<div class="form-group col-md-6 col-lg-6 col-sm-12">
+								<label class="form-label" for="dob">Date of Birth</label>&nbsp;<span class="text-danger">*</span>
+								<input type="date" class="form-control" id="dob" name="dob" >
+								<p id="msg4" class="text-danger"></p>
+							</div>
+
+							<div class="form-group col-md-6 col-lg-6 col-sm-12">
+								<label class="form-label" for="age">Age</label>&nbsp;<span class="text-danger">*</span>
+								<input type="number" class="form-control" id="age" name="age" placeholder="Enter your age" >
+								<p id="msg5" class="text-danger"></p>
+							</div>
+
+						</div>
+						<div class="form-group my-3">
+							<label class="form-label" for="email">Email address</label>&nbsp;<span class="text-danger">*</span>
+							<input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" >
+							<p id="msg6" class="text-danger"></p>
+
+						</div>
+						<div class="row my-3">
+							<div class="form-group col-md-6 col-lg-6 col-sm-12">
+								<label class="form-label" for="mobile">Mobile Number</label>&nbsp;<span class="text-danger">*</span>
+								<input type="number" class="form-control" id="mobile" name="mobile" placeholder="Enter your mobile number" >
+								<p class="text-danger" id="msg7"></p>
+							</div>
+							<div class="form-group col-md-6 col-lg-6 col-sm-12">
+								<label class="form-label" for="home">Guardian Number</label>&nbsp;<span class="text-danger">*</span>
+								<input type="text" maxlength="10" class="form-control" id="gnumber" name="gnumber" placeholder="Enter your guardian number">
+								<p class="text-danger" id="msg8"></p>
+							</div>
+						</div>
+						
+						<!-- Permanent Address -->
+					  <div class="location-set">
+							<h4 class="text-center my-2 text-decoration-underline ">Permanent Address</h4>
+							<div class="form-group">
+								<label class="form-label" for="streetPermanent">Street Address</label>&nbsp;<span class="text-danger">*</span>
+								<input type="text" class="form-control" id="streetPermanent" name="streetPermanent" placeholder="Street Address" >
+								<p class="text-danger" id="msg9"></p>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="form-label" for="countryPermanent">Country</label>&nbsp;<span class="text-danger">*</span>
+										<div class="dropdown" >											
+											<select name="country" class="countries form-select btn btn-outline-light text-dark border border-1 w-100 dropdown-toggle" type="button" id="countryId">
+												      <option class="hovern table-hover text-bg-light" value="">Select Country</option>
+											 </select>									
+										</div>
+										<p id="msg10" class="text-danger"></p>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="form-label" for="statePermanent">State/Province</label>&nbsp;<span class="text-danger">*</span>
+										<div class="dropdown" >											
+											<select name="state" class="states form-select btn btn-outline-light text-dark border border-1 w-100 dropdown-toggle" type="button" id="stateId">
+												Select State / Province
+												<option class="hovern table-hover text-bg-light" value="">Select State</option>
+											</select> 										   
+										</div>
+										<p id="msg11" class="text-danger"></p>
+									</div>
+								</div>
+							</div>
+							<div class="row">  
+								
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="form-label" for="cityPermanent">City</label>&nbsp;<span class="text-danger">*</span>
+										<div class="dropdown" >											
+											<select name="city" type="button" class="cities form-select btn btn-outline-light text-dark border border-1 w-100 dropdown-toggle citySelect" id="cityId">
+												<option class="hovern table-hover text-bg-light"  value="">Select City</option>
+											</select>										   
+										</div>
+										<p id="msg12" class="text-danger"></p>
+
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="form-label" for="pinPermanent">Pin code/Zip Code</label>&nbsp;<span class="text-danger">*</span>
+							
+										<input type="number" class="form-control"  maxlength="7" minlength="5"  id="pinPermanent"  name="pinPermanent" placeholder="Pin code/Zip Code" >
+									</div>
+									<p id="msg13" class="text-danger"></p>
+								</div>
+							</div>
+						</div>
+			
+						<!-- Local Address -->
+						 <div class="location-set">
+							<h4 class="text-center my-2 text-decoration-underline">Local Address</h4>
+							<div class="form-group">
+								<label class="form-label" for="streetLocal">Street Address</label>&nbsp;<span class="text-danger">*</span>
+								<input type="text" class="form-control" id="streetLocal" placeholder="Street Address" >
+							</div>
+							<p id="msg14" class="text-danger"></p>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="form-label" for="countrylocal">Country</label>&nbsp;<span class="text-danger">*</span>
+										<div class="dropdown" >
+											<select name="pcountry" class="countries form-select btn btn-outline-light text-dark border border-1 w-100 dropdown-toggle" type="button" id="localcountry">
+												<option class="hovern table-hover text-bg-light" value="Select Country">Select Country</option>
+									   </select>
+											
+										</div>
+									</div>
+							<p id="msg15" class="text-danger"></p>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="form-label" for="statelocal">State/Province</label>&nbsp;<span class="text-danger">*</span>
+										<div class="dropdown" >											
+											<select name="state" class="states form-select btn btn-outline-light text-dark border border-1 w-100 dropdown-toggle" type="button" id="localstate">
+												Select State / Province
+												<option class="hovern table-hover text-bg-light" value="">Select State</option>
+											</select> 										   
+										</div>
+									</div>
+								<p id="msg16" class="text-danger"></p>
+								</div>
+							</div>
+							<div class="row"> 
+								<div class="col-md-6">
+									<div class="form-group ">
+										<label class="form-label" for="citylocal">City</label>&nbsp;<span class="text-danger">*</span>
+										<div class="dropdown" >										
+											<select name="city" type="button" class="cities form-select btn btn-outline-light text-dark border border-1 w-100 dropdown-toggle citySelect" id="localcity">
+												Select City
+												<option class="hovern table-hover text-bg-light"  value="">Select City</option>
+											</select>										   
+										</div>
+									</div>
+								<p id="msg17" class="text-danger"></p>
+								</div> 
+								
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="form-label" for="pinlocal">Pin code/Zip Code</label>&nbsp;<span class="text-danger">*</span>
+										<input type="number" class="form-control" id="pinLocal" name="pinLocal" placeholder="Pin code/Zip Code" >
+									</div>
+							<p id="msg18" class="text-danger"></p>
+								</div>
+							</div>
+						</div>
+		
+						<!-- Education Information Section -->
+						<h4 class="text-center my-3 text-decoration-underline">Education Information</h4>
+						
+						<div class="row my-3">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="sscBoard">SSC Percentage</label>&nbsp;<span class="text-danger">*</span>
+									<input type="text" class="form-control" id="sscBoard" maxlength="2" name="sscBoard" placeholder="Enter your SSC percentage" >
+									
+								</div>
+							<p id="msg20" class="text-danger"></p>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="sscYear">Passing Year (SSC)</label>&nbsp;<span class="text-danger">*</span>
+									<input type="number" class="form-control" id="sscYear" maxlength="4" name="sscYear" placeholder="Enter your SSC passing year" >
+								</div>
+								<p id="msg21" class="text-danger"></p>
+							</div>
+						</div>
+						<div class="row my-3">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="hscBoard">HSC Percentage</label>&nbsp;<span class="text-danger">*</span>
+									<input type="text" class="form-control" id="hscBoard" name="hscBoard" maxlength="2" placeholder="Enter your HSC percentage" >
+								</div>
+								<p id="msg22" class="text-danger"></p>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="hscYear">Passing Year (HSC)</label>&nbsp;<span class="text-danger">*</span>
+									<input type="number" class="form-control" id="hscYear" name="hscYear" maxlength="4" placeholder="Enter your HSC passing year" >
+								</div>
+								<p id="msg23" class="text-danger"></p>
+							</div>
+						</div>
+						<div class="row my-3">
+						<div class="form-group col-md-6">
+							<label class="form-label" for="degree">Degree</label>
+							<select class="w-100 rounded-2 p-2 flow-control" id="degreetype" name="degreetype">
+								<option class="dropdown-item rounded-2 p-2" value="Select Degree">Select Degree</option>
+								<option value="B.E.">B.E.</option>
+								<option value="B.Tech.">B.Tech.</option>
+								<option value="BSC">BSC</option>
+								<option value="BBA">BBA</option>
+								<option value="BCOM">BCOM</option>
+								<option value="Other">Other</option>
+                <option value="Not Apperared">Not Apperared</option>
+							</select>
+							<p id="msg24" class="text-danger"></p>
+						</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="degreeYear">Passing Year (Degree)</label>
+									<select class="w-100 rounded-2 p-2 flow-control" id="degreeYear" name="degreeYear">
+										<option value="Select Field">Select Field</option>
+										<option value="pursuing">pursuing</option>
+										<option value="Completed">Completed</option>
+										<option value="Not Apperared">Not Apperared</option>
+
+									</select>
+
+								</div>
+								<p id="msg25" class="text-danger"></p>
+
+							</div>
+						</div>
+						<div class="row my-3">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="masters">Masters</label>
+									<select class="w-100 rounded-2 p-2 flow-control" id="mastertype" name="mastertype">
+										<option class="dropdown-item" value="Select Masters">Select Masters</option>
+										<option class="dropdown-item" value="M.E.">M.E.</option>
+										<option class="dropdown-item" value="M.Tech.">M.Tech.</option>
+										<option class="dropdown-item" value="MSC">MSC</option>
+										<option class="dropdown-item" value="MBA">MBA</option>
+										<option class="dropdown-item" value="MCOM">MCOM</option>
+										<option class="dropdown-item" value="Other">Other</option>
+                    <option value="Not Apperared">Not Apperared</option>
+									</select>
+								</div>
+								<p id="msg26" class="text-danger"></p>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="mastersYear">Passing Year (Masters)</label>
+									<select class="w-100 rounded-2 p-2 flow-control" id="mastersYear"  name="mastersYear">
+										<option value="Select Field">Select Field</option>
+										<option value="pursuing">pursuing</option>
+										<option value="Completed">Completed</option>
+										<option value="Not Apperared">Not Apperared</option>
+									</select>
+								</div>
+								<p id="msg27" class="text-danger"></p>
+							</div>
+							<div class="col-md-6">
+								<div class=" d-flex flex-column justify-content-start  my-3">
+									<label class="form-label" for="cv">Attach your CV&nbsp;<span class="text-danger">*</span></label>
+									<input type="file" class="form-control " id="cv" name="cv" accept=".pdf,.doc,.docx" >
+								</div>
+								<p id="msg28" class="text-danger"></p>
+							</div>
+						</div>
+						<div class="d-flex justify-content-center my-2">
+							<button type="submit"class="btn text-white fw-bold px-3 mx-auto" data-bs-toggle="modal"  data-bs-target="#ModalThank1"  style="background-color: #004080;">Register</button>
+						</div>
+					</form>
+				</div>
+		</div>
+	  </div>
+	</div>
+  </div>
+<!-- validation on registration page End -->
+  <!-- Modal End Of Registration form -->
+
+
+  <!-- Modal Start of Thankyou -->
+  
+  <div class="modal fade" id="ModalThank1" tabindex="-1" aria-labelledby="modallabel-thank" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="">
+		  <h1 class="modal-title fs-5" id="ThankyouModal"></h1>
+		  <button type="button" class="btn-close float-end me-2 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body container py-3">
+			<div class="row text-center justify-content-center">
+				<div class="col-md-6 ">
+						<div>
+						<img  src="../Images/registration successfull.gif"  class="img-fluid w-75" alt=""><br>
+            <span class="h1 text-center text-dark">Thank You</span>
+					</div>
+					<div>
+							<form class="" >
+								<div class="mb-3">
+									<p class="text-start fs-5 text-dark text-center mt-5 ">
+										Registration Has Been Successful 
+									</p>
+	
+									<h5 class="text-success">Admin Will Contact You Shortly </h5>
+			
+								</div> 
+							<div class="d-flex flex-column justify-content-center">
+								<a href="../TechnologyTables/technology.html">
+								<button type="button" class="btn text-white mx-auto my-4" style=" background-color:#004080;">Let's Explore More</button>
+							</a>
+							</div>
+							</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <!-- Modal End of Thankyou -->
+
+  <!-- Modal Start of Reset -->
+  <div class="modal fade " id="ModalReset" tabindex="-1" aria-labelledby="modallabel-reset" aria-hidden="true">
+	<div class="modal-dialog shadow">
+	  <div class="modal-content">
+		<div class="">
+		  <h1 class="" id="modallabel"></h1>
+		  <button type="button" class="btn-close float-end me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body container-fluid">
+      <div class="row ">
+        <img class="col-4 img img-fluid " src="../Images/leftside.png" alt="">
+        <img class="col-4 img img-fluid " src="../Images/Axiom_VIP_logo.png" alt="">
+        <img class="col-4 img img-fluid " src="../Images/rightside.png" alt="">
+      </div>
+				<div class="row  text-center justify-content-center">
+					<div class="col-auto rounded-3 w-75 ">
+						
+						<div>
+							<h1 class="">Forgot Password</h1>
+							<div class="card-body">
+								<form class="" >
+									<div class="">
+										<p class="text-start text-danger">Lost your Password ? <br>
+											By clicking on send request the password sent successfully to your Register Email Address </p>
+										<input type="text" id="username" name="username" class="form-control py-2" placeholder="Email" required>
+									</div> 
+								<div class="d-flex flex-column justify-content-center">
+									
+									<button type="button" data-bs-toggle="modal" data-bs-target="#ModalSend" class=" btn text-white mx-auto my-4" style=" background-color: #004080;">Send Request</button>
+									
+									<button data-bs-toggle="modal" data-bs-target="#ModalLog" type="button" class="btn mx-auto mb-4" style="color: #004080; border: 1px solid #004080;">Back to Login</button>
+								
+								</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <!-- Modal End of Reset -->
+
+  <!-- Model start of send request -->
+
+  <div class="modal fade " id="ModalSend" tabindex="-1" aria-labelledby="modallabel-send" aria-hidden="true">
+	<div class="modal-dialog shadow">
+	  <div class="modal-content">
+		<div class="">
+		  <h1 class="" id="modallabel"></h1>
+		  <button type="button" class="btn-close float-end me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body container-fluid">
+      <div class="row ">
+        <img class="col-4 img img-fluid " src="../Images/leftside.png" alt="">
+        <img class="col-4 img img-fluid " src="../Images/Axiom_VIP_logo.png" alt="">
+        <img class="col-4 img img-fluid " src="../Images/rightside.png" alt="">
+      </div>
+				<div class="row  text-center justify-content-center">
+					<div class="col-auto rounded-3 w-75 ">
+						
+						<div>
+							<hr class="text-warning my-5">
+							
+								<form class="" >
+									<div class="mb-3">
+										<p class="text-start text-success text-center mt-5 fw-bolder">
+											PASSWORD SENT SUCCESSFULLY TO YOUR <br>
+											REGISTERED  EMAIL ADDRESS 
+										</p>
+				
+									</div> 
+								<div class="d-flex flex-column justify-content-center">
+									<button data-bs-toggle="modal" data-bs-target="#ModalLog" type="button" class="btn text-white mx-auto my-5" style=" background-color:#004080;">Back to Login</button>
+								</div>
+								</form>
+							
+						</div>
+					</div>
+				</div>
+		</div>
+	  </div>
+	</div>
+  </div>
+<!-- Model end of send request -->
+
+    
+    <!-- technology -->
+
+    <div style="background-color: #eef1f7;" class="mt-5">
+        <div class="container mb-5" >
+                  <h2 class="mt-5 text-center fw-bold pt-5 display-5" style="font-family: Inria Sans;">Axiom Internship Program Detail Sheet </h2>
+        <div class="row mt-5" style="z-index: -1">
+          <div class="col-md-12 mb-5">
+            <div class="owl-carousel owl-theme" id="clients-carousel">
+                <a href="./CLangtablenormally.html">
+                    <div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/Cprogm.png"
+                      /></div
+                  ></a>
+                  <a href="./CPPtable.html"
+                    ><div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/CPP.png"
+                      /></div
+                  ></a>
+                  <a href="./HTMLtable.html"
+                    ><div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/HTML1.png"
+                      /></div
+                  ></a>
+                  <a href="./CSStable.html"
+                    ><div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/CSS1.png"
+                      /></div
+                  ></a>
+                  <a href="./Bootstrap.html"
+                    ><div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/bootstrap1.png"
+                      /></div
+                  ></a>
+                  <a href="./Java.html"
+                    ><div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/java.png"
+                      /></div
+                  ></a>
+                  <a href="./JAvascript.html"
+                    ><div class="item box">
+                      <img
+                      alt="client logo"
+                      class="client-img w-75 p-2"
+                      src="./Img/js1.png"
+                      /></div
+                      ></a>
+                  <a href="./JQuery.html"
+                    ><div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/jquery1.png"
+                      /></div
+                  ></a>
+                  <a href="./Laravel.html"
+                    ><div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/laravel.png"
+                      /></div
+                  ></a>
+                  <a href="./PHPtable.html"
+                    ><div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/php1.png"
+                      /></div
+                  ></a>
+                  <a href="./Python.html"
+                    ><div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/python.png"
+                      /></div
+                  ></a>
+                  <a href="./Ajax.html"
+                    ><div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/ajax1.png"
+                      /></div
+                  ></a>
+                  <a href="./Angular.html"
+                    ><div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/angular.png"
+                      /></div
+                  ></a>
+                  <a href="./Tailwind.html"
+                    ><div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/tailwind css.png"
+                      /></div
+                  ></a>
+                  <a href="./ReactJS.html"
+                    ><div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/react_js.png"
+                      /></div
+                  ></a>
+                  <a href="./ReactNAtivetable.html"
+                    ><div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/react_native.png"
+                      /></div
+                  ></a>
+                  <a href="./Flutter.html"
+                    ><div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/flutter.png"
+                      /></div
+                  ></a>
+                  <a href="./Meantable.html"
+                    ><div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/mean stack.png"
+                      /></div
+                  ></a>
+                  <a href="./Merntable.html"
+                    ><div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/mernstack.png"
+                      /></div
+                  ></a>
+                  <a href="./Github.html"
+                    ><div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/github.png"
+                      /></div
+                  ></a>
+                  <a href="./Django.html"
+                    ><div class="item box">
+                      <img
+                        alt="client logo"
+                        class="client-img w-75 p-2"
+                        src="./Img/django.png"
+                      /></div
+                  ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- content -->
+<div
+class="col-auto container col-md-auto col-sm-auto ms-sm-auto col-lg-12 px-md-4 py-3"
+
+>
+<div class="my-5">
+  <h4 class="w-100 text-center  text-white p-3" style="background-color: #004080;">Ajax</h4>
+  <div style="max-width: 100%; overflow-x: auto;">
+      
+
+  <table
+      class="table table-bordered table-hover border-dark w-100 h-100"  >
+      <thead class="text-center">
+          <th>Sr No.</th>
+          <th>Topic Name</th>
+          <th>Sub Topics</th>
+          <th>Duration for Topic</th>
+      </thead>
+      <tbody>
+          <tr>
+              <td>1</td>
+              <td>Installation</td>
+              <td>
+                 1. What is Ajax <br><hr>
+                 2. Why we use Ajax<br><hr>
+                 <a href="https://www.w3schools.com/xml/ajax_intro.asp">https://www.w3schools.com/xml/ajax_intro.asp</a><br><hr>
+                 <a href="https://www.freecodecamp.org/news/ajax-tutorial/">https://www.freecodecamp.org/news/ajax-tutorial/</a><br><hr>
+                 <a href="https://www.youtube.com/watch?v=ugiFpA03B6c">https://www.youtube.com/watch?v=ugiFpA03B6c</a><br><hr>
+                 <a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU</a>
+              </td>
+              <td>04:00 Hours</td>
+          </tr>
+
+          <tr>
+              <td>2</td>
+              <td>API/Json</td>
+              <td>      
+                1. How to fetch Json data from an external url    <br><hr>                                                                                                                                                                                                                                           
+                  2. Introduction to REST API    <br><hr> 
+                 3. Create of Node JS server with REST API   <br><hr>
+                4.Testing Node JS Server ( by using Postman or Insomnia)  <br><hr>
+                5.GET,  POST PUT and DELETE Request with ajax  <br><hr>
+                6.Empolyee portal Application part 1  ,2 and 3with Node JS ajax"                         Modules
+
+              </td>
+              <td>03:00 Hours</td>
+          </tr>
+
+          <tr>
+              <td>3</td>
+              <td>Axios Library</td>
+              <td>
+                1. Introduction of Axios library<br><hr>
+                2. REST API With Axios library<br><hr>
+                3. Employee portal Application using axios library ajax <br><hr>
+               
+              </td>
+              <td>04:00 Hours</td>
+          </tr>
+
+          <tr>
+              <td>4</td>
+              <td>Image Gallery
+             </td>
+              <td>
+                Creating Image gallary using unsplash API  
+              </td>
+              <td>04:00 Hours</td>
+          </tr>
+
+          
+      </tbody>
+  </table>
+</div>
+</div>
+</div>
+
+    <!-- chat box html  -->
+<div class="container" >
+  <div class="row">
+      <div class="col-12" style="z-index: 1;">
+          <button class="chatbot-toggler">
+              <!-- <span class="material-symbols-outlined">mode_comment</span> -->
+              <iconify-icon class="material-symbols-outlined"
+                  icon="ph:chats-teardrop-bold"></iconify-icon>
+              <span class="material-symbols-outlined"></span>
+          </button>
+          <div class="chatbot">
+              <header>
+                  <h2>Chatbot</h2>
+                  <span
+                      class="close-btn material-symbols-outlined">close</span>
+              </header>
+              <ul class="chatbox">
+                  <li class="chat incoming">
+                      <span class="material-symbols-outlined">smart_toy</span>
+                      <p>Hi There &#128075; <br> how can i help you</p>
+                  </li>
+              </ul>
+              <div class="chat-input">
+                  <textarea placeholder="Enter a message..."
+                      required></textarea>
+                  <span id="send-btn"
+                      class="material-symbols-outlined">send</span>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- end of chat box html  -->
+<!-- @endsection  Footer Area -->
+    <div class="w-100"
+		style="background-color: #004080; text-align: center;height: 40px;padding-top: 8px; position: static;">
+		<p>
+			<a href="#" style="text-decoration:none; color: #ffff;">Developed by Axiom TechGuru Pvt. Ltd.</a>
+		</p>
+	</div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      function showNewImage() {
+        document.querySelector(".new-certificate").style.display = "block";
+        $(".certificate").css("opacity", "0.4");
+      }
+
+      function hideNewImage() {
+        document.querySelector(".new-certificate").style.display = "none";
+        $(".certificate").css("opacity", "1");
+      }
+
+      $("#clients-carousel").owlCarousel({
+        autoplay: true,
+        loop: true,
+        margin: 15,
+        dots: false,
+        slideTransition: "linear",
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        autoplaySpeed: 2000,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 2,
+          },
+          500: {
+            items: 2,
+          },
+          600: {
+            items: 2,
+          },
+          800: {
+            items: 2,
+          },
+          1200: {
+            items: 4,
+          },
+        },
+      });
+    </script>
+    <!-- Chatbox CSS Start -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+.chatbot-toggler {
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+    height: 50px;
+    width: 50px;
+    color: white;
+    background-color: #004080;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;  
+    border-radius: 50%;
+    transition: all 0.1s ease;
+}
+/* .show-chatbot .chatbot-toggler{
+    transform: rotate(90deg);
+}   icon move to 90deg */
+.chatbot-toggler span {
+   position: absolute;
+}
+.show-chatbot .chatbot-toggler span:first-child,
+.chatbot-toggler span:last-child{
+    opacity: 0;
+} 
+.show-chatbot .chatbot-toggler span:last-child {
+    opacity: 1;
+}
+.chatbot{
+    position: fixed;
+    right: 40px;
+    bottom: 100px;
+    width: 300px; /* width of chatbot */
+    transform: scale(0.5);
+    opacity: 0;
+    pointer-events: none;/* imp */
+    overflow: hidden;
+    background: #fff;
+    border-radius: 15px;
+    transform-origin: bottom right;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+    transition: all 0.1s ease;
+}
+.show-chatbot .chatbot {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+.chatbot header{
+   background: #004080;
+   padding: 16px 0;
+   text-align: center;
+   position: relative;
+}
+.chatbot header h2{
+    color: #fff;
+    font-size: 1.4rem;
+}
+.chatbot header span{
+    position: absolute;
+    right: 20px;      
+    top: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    transform: translateY(-50%);
+}
+.chatbot .chatbox{
+    height: 300px; /*hight of chatbox*/
+    overflow-x: auto;
+    padding: 30px 20px 100px;
+}
+.chatbox .chat {
+    display: flex;
+}
+.chatbox .incoming span {
+    height: 32px;
+    width: 32px;
+    color: #fff;
+    align-self: center;
+    background: #004080;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 4px;
+    margin: 0 10px 7px 0;
+}
+.chatbox .outgoing {
+    /* margin: 20px 0; */
+    justify-content: flex-end;
+}
+.chatbox .chat p{
+    color: #fff;
+    max-width: 75%;
+    white-space: pre-wrap;
+    font-size: 0.95rem;
+    padding: 12px 16px;
+    border-radius: 10px 10px 0 10px;
+    background: #004080;
+}
+.chatbox .chat p.error {
+    color: #721c24;
+    background: #f8d7da;
+}
+.chatbox .incoming p{
+    color: #000;
+    background: #f2f2f2;
+    border-radius: 10px 10px 10px 0;
+}
+.chatbot .chat-input{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    background: #fff;
+    padding: 5px 20px;
+    border-top: 1px solid #ccc;
+}
+.chat-input textarea {
+    height: 55px;
+    width: 100%;
+    border: none;
+    outline: none;
+    max-height: 180px;
+    font-size: 0.95rem;
+    resize:none ;
+    padding: 16px 15px 16px 0;
+}
+.chat-input span {
+    align-self: flex-end;
+    height: 55px;
+    line-height: 55px;
+    color: #004080;
+    font-size: 1.35rem;
+    cursor: pointer;
+    visibility: hidden;
+}
+.chat-input textarea:valid ~ span {
+    visibility: visible;
+}
+
+@media(max-width: 490px){
+    .chatbot{
+        right: 10px;
+        bottom: 25px;
+        width: 300px;
+        height: 350px;
+        border-radius: 10px;
+    }
+    .chatbot .chatbox{
+        height: 90%;
+    }
+    .chatbot header span{
+        display: block;
+    }
+}
+@media(max-width: 380px){
+  .chatbot{
+        right: 10px;
+        bottom: 25px;
+        width: 250px;
+        height: 290px;
+        border-radius: 10px;
+    }
+}
+    </style>
+          <!-- Chatbox CSS End -->
+
+          <!-- Chatbox Script Start -->
+          <script>
+  const chatInput = document.querySelector(".chat-input textarea");
+const sendChatBtn = document.querySelector(".chat-input span");
+const chatbox = document.querySelector(".chatbox");
+const chatbotToggler = document.querySelector(".chatbot-toggler");
+const chatbotCloseBtn = document.querySelector(".close-btn");
+
+let userMessage;
+const inputInitHeight = chatInput.scrollHeight;
+
+const createChatLi = (message,className) =>{
+    // Create a chat <li> element with passed message and className
+    const chatLi = document.createElement("li");
+    chatLi.classList.add("chat",className);
+    let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
+    chatLi.innerHTML = chatContent;
+    chatLi.querySelector("p").textContent = message;
+    return chatLi;
+}
+
+const handleChat = () =>{
+    userMessage = chatInput.value.trim();
+    if(!userMessage)return;
+    chatInput.value = "";
+    chatInput.style.height = `${inputInitHeight}px`;
+
+    // Append the user's message to the chatbox
+    chatbox.appendChild(createChatLi(userMessage,"outgoing"));
+    chatbox.scrollTo(0,chatbox.scrollHeight);
+
+    setTimeout(() =>{
+        // display "thinking..." message while waiting for the response
+        const incomingChatLi = createChatLi("thinking...","incoming")
+        chatbox.appendChild(incomingChatLi);
+        chatbox.scrollTo(0,chatbox.scrollHeight);
+        generateResponse(incomingChatLi);
+    },600);
+}
+
+chatInput.addEventListener('input', () => {
+    // Adjust the height of the input textarea based on its content
+    chatInput.style.height = `${inputInitHeight}px`;
+    chatInput.style.height = `${chatInput.scrollHeight}px`; 
+});
+
+chatInput.addEventListener('keydown', (e) => {
+    // if Enter key is pressed Without shift key and the window
+    // width is greater than 800px, handle the chat
+    if(e.key === "Enter" && !e.shiftKey && window.innerWidth > 0){
+        e.preventDefault();
+        handleChat();
+    }
+  
+})
+
+sendChatBtn .addEventListener('click',handleChat);
+chatbotCloseBtn.addEventListener('click', () => document.body.classList.remove("show-chatbot"));
+chatbotToggler.addEventListener('click', () => document.body.classList.toggle("show-chatbot"));
+</script>
+          <script
+              src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+          <!-- Chatbox Script End -->
+  </body>
+</html>

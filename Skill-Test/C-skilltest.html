@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <link rel="icon" href="../Images/guru.png"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/439a542074.js"></script>
+    <link rel="stylesheet" href="">
+    <script src="https://kit.fontawesome.com/439a542074.js"></script>
+     <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+            <link rel="stylesheet" href="js_css/skill.css">
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+            </style>
+    <title>C-Skilltest</title>
+
+</head>
+<body class="user-select-none">
+    <div class="header">
+        <nav class="navbar position-fixed w-100 z-1" style="background-color: #004080;;">
+            <div class="container-fluid mx-2">
+              <button class="navbar-toggler me-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="#">
+                    <i class="fa-solid fa-bell  float-end" style="color: #fcfcfc;"></i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- sidebar of VIP -->
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-2 col-sm-3 col-md-3 shadow-lg  position-fixed  top-0 start-0 col-lg-2 px-sm-1  bg-light" >
+                <div class="d-flex flex-column mx-auto  align-items-sm-center  pt-2 text-dark min-vh-100">
+                    <!-- VIP Logo -->
+                    <a href="#" data-bs-toggle="collapse" class="nav-link px-0  align-middle mt-3 ">
+                        <img src="../Images/Axiom_VIP_logo.png" class="mt-5 img-fluid" alt="Axiom VIP" width="80" height="50"></a>
+                    <!-- User Section -->
+                    <div class="mt-3">
+                        <img src="https://github.com/mdo.png" alt="Profile" width="50" height="50" class="rounded-circle  mx-sm-5">
+                        <a href="#" class="d-flex align-items-center text-primary text-decoration-none dropdown dropdown-toggle justify-content-center text-center my-3" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="d-none d-sm-inline">It's SK </span>
+                        </a>
+                        <hr style="color: #004080;">
+                        <!-- Dropdown for Profile Options -->
+                        <ul class="dropdown-menu dropdown-menu-light text-small  shadow">
+                            <li class="hovern" style="padding-left: 3px; padding-right: 3px;"><a style="color: #004080;" class="dropdown-item " href="../Profile/Viewprofile.html"> <i class="fa-solid fa-street-view"></i> View Profile</a></li>
+                            <li >
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="hovern" style="padding-left: 3px; padding-right: 3px;"><a style="color: #004080;" class="dropdown-item" href="../Profile/editprofile.html"> <i class="fa-solid fa-user-pen"></i> Edit Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="hovern" style="padding-left: 3px; padding-right: 3px;"><a style="color: #004080;" class="dropdown-item" href="../index.html"> <i class="fa-solid fa-right-from-bracket fa-rotate-180"></i> Log Out</a></li>
+                        </ul>
+                    </div>
+
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="w-100 nav-item  rounded-2 my-1 shadow-sm">
+                        <a href="../Home Page/home.html" class="nav-link hovern align-middle hovern" >
+                                <i class="fa-solid fa-house-chimney"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                        </a>
+                    </li>
+                    <li class="w-100 rounded-2 my-1 shadow-sm">
+                        <a href="#submenu1" data-bs-toggle="collapse" class="nav-link hovern align-middle">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i> <span class="ms-1  d-none d-sm-inline">Analyze</span> </a>
+                        <ul class="collapse flex-column ms-1 list-unstyled overflow-x-scroll" id="submenu1" data-bs-parent="#menu">
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Analyze/progressreport.html" class="nav-link  hovern px-0 hovern"> <i class="fa-solid fa-bars-progress hovern"></i> <span class="d-none d-sm-inline">Progress Report</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Analyze/Sesionreportpage.html" class="nav-link hovern px-0 hovern"> <i class="fa-solid fa-flag hovern"></i> <span class="d-none d-sm-inline">Session Report</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="w-100  rounded-2 my-1 shadow-sm">
+                        <a href="#submenu2" data-bs-toggle="collapse" class="nav-link  hovern hovern align-middle ">
+                            <i class="fa-solid fa-table"></i> <span class="ms-1 d-none d-sm-inline">Technology</span></a>
+                        <ul class="collapse flex-column ms-1  list-unstyled" id="submenu2" data-bs-parent="#menu" style="max-height: 120px; overflow-y: scroll;">
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/figma/figma-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">FIGMA</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link hovern  px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/c/c-original.svg" alt="" width="20px"> <span class="d-none hovern w-100 d-sm-inline">C</span></a>
+                            </li>
+                            <li  class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern hovern"> <img src="../../devicon-master/devicon-master/icons/cplusplus/cplusplus-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">C++</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/html5/html5-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">HTML</span></a>
+                            </li>
+                            <li  class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/css3/css3-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">CSS</span></a>
+                            </li>
+                            <li  class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/bootstrap/bootstrap-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">BOOTSTRAP</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm"> 
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/javascript/javascript-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">JAVASCRIPT</span></a>
+                            </li>
+                            <li  class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/jquery/jquery-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">JQUERY</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/laravel/laravel-plain.svg" alt="" width="20px"> <span class="d-none d-sm-inline">LARAVEL</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/php/php-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">PHP</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/python/python-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">PYTHON</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/java/java-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">JAVA</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../Images/ajax.png" alt="" width="20px"> <span class="d-none d-sm-inline">AJAX</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/angularjs/angularjs-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">ANGULAR</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/tailwindcss/tailwindcss-plain.svg" alt="" width="20px"> <span class="d-none d-sm-inline">TAILWIND CSS</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/react/react-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">REACT NATIVE</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/flutter/flutter-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">FLUTTER</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../Images/mean.png" alt="" width="20px"> <span class="d-none d-sm-inline">MEAN STACK</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"><img src="../../Images/mern.png" alt="" width="22px"> <span class="d-none d-sm-inline">MERN STACK</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/github/github-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">GITHUB</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/django/django-plain.svg" alt="" width="20px"> <span class="d-none d-sm-inline">DJANGO</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li  class="w-100  rounded-2 my-1 shadow-sm">
+                        <a href="#submenu3" data-bs-toggle="collapse" class=" nav-link  hovern align-middle">
+                            <i class="fa-solid fa-bookmark"></i> <span class="ms-1 d-none d-sm-inline">Acitvity</span> </a>
+                            <ul class="collapse flex-column ms-1 list-unstyled" id="submenu3" data-bs-parent="#menu">
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Activity/Calendar.html" class="nav-link px-0 hovern"> <i class="fa-solid fa-calendar-days"></i> <span class="d-none d-sm-inline">Calender</span></a>
+                            </li>
+                            <li  class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Activity/Event.html" class="nav-link px-0 hovern"> <i class="fa-solid fa-hand-sparkles"></i> <span class="d-none d-sm-inline">Events</span></a>
+                            </li>
+                            <li  class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="C-skilltest.html" class="nav-link px-0 hovern"> <i class="fa-solid fa-file-lines"></i> <span class="d-none d-sm-inline">Skill Test</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                <hr>
+                <li class="nav-item  rounded-2 my-1 shadow-sm w-100">
+                    <a href="../index.html" class="nav-link align-middle hovern ">
+                        <i class="fa-solid fa-right-from-bracket fa-rotate-180"></i> <span class="ms-1 d-none d-sm-inline">Log Out</span>
+                    </a>
+                </li>
+
+                </div>
+        </div>
+
+        <!-- content of right side data -->
+
+         <div class="col-10 col-md-9  col-sm-9  ms-sm-auto  col-lg-10  px-md-4 py-3" style="margin-left: 70px; ">
+             <div class="mt-5">
+                    <!-- Scrollable tab start -->
+                    <div class="scrollable-tabs-container ms-0 position-fixed" id="scroll_div">
+
+                        <button class="left-arrow active me-5 pe-3">
+                            <i class="fa-solid fa-chevron-up fa-rotate-270" style="color: #004080;"></i>
+                        </button>
+
+                        <ul class="d-flex gap-2 p-1  m-0 ms-5 ps-2 me-5 pe-2" style="list-style: none;">
+                            <li>
+                                <a id="C-skilltest" href="C-skilltest.html" class="active">C</a>
+                            </li>
+
+                            <li>
+                                <a id="C-skilltest++" href="C++-skilltest.html">C++</a>
+                            </li>
+
+                            <li>
+                                <a id="HTML-skilltest" href="HTML-skilltest.html">HTML</a>
+                            </li>
+
+                            <li>
+                                <a id="CSS-skilltest" href="CSS-skilltest.html">CSS</a>
+                            </li>
+
+                            <li>
+                                <a id="BOOTSTRAP-skilltest" href="BOOTSTRAP-skilltest.html">BOOTSTRAP</a>
+                            </li>
+
+                            <li>
+                                <a id="JAVASCRIPT-skilltest" href="JAVASCRIPT-skilltest.html">JavaScript</a>
+                            </li>
+
+                            <li>
+                                <a id="jquery-skill" href="jquery-skill test.html">JQuery</a>
+                            </li>
+
+                            <li>
+                                <a id="Ajax-skill" href="Ajax-skill.html" >Ajax</a>
+                            </li>
+
+                            <li>
+                                <a id="Php-skilltest" href="Php-skilltest.html">PHP</a>
+                            </li>
+
+                            <li>
+                                <a id="laravel-skilltest" href="laravel-skilltest.html">Laravel</a>
+                            </li>
+
+                            <li>
+                                <a id="angular-skilltest" href="angular-skilltest.html">Angular</a>
+                            </li>
+
+                            <li>
+                                <a id="MERNstack-skilltest" href="MERNstack-skilltest.html">MERN-Stack</a>
+                            </li>
+
+                            <li>
+                                <a id="pyathonskill-test" href="pyathonskill-test.html">Python</a>
+                            </li>
+
+                            <li>
+                                <a id="mean-stack-skilltest" href="mean-stack-skilltest.html">MEAN-Stack</a>
+                            </li>
+
+                            <li>
+                                <a id="reactnativeskilltest" href="reactnativeskilltest.html">React-Native</a>
+                            </li>
+
+                            <li>
+                                <a  id="Flutter" href="Flutter.html">Flutter</a>
+                            </li>
+
+                            <li>
+                                <a id="Reactjs_skilltest"  href="Reactjs_skilltest.html">React Js</a>
+                            </li>
+
+                            <li>
+                                <a id="tailwindcss_skill_test" href="tailwindcss_skill_test.html">Tailwind CSS</a>
+                            </li>
+
+                            <li>
+                                <a id="Git-hub-skill_test" href="Git-hub-skill_test.html">GITHUB</a>
+                            </li>
+
+                            <li>
+                                <a  id="Django-skill-test" href="Django-skill-test.html">Django</a>
+                            </li>
+                        </ul>
+
+                        <button class="right-arrow active pe-3">
+                            <i class="fa-solid fa-chevron-up fa-rotate-90" style="color: #004080;"></i>
+                        </button>
+
+                    </div>
+                    <!-- Scrollable tab end -->
+
+                    <br><br><br><br>
+                    <div class=" m-0 p-0 ms-sm-2 position-fixed w-75" style="overflow-y:scroll; height: 500px; z-index: -1;" >
+                            <form >
+                                        <div style="color: black;" >
+                                            <h5 >1. Who is the father of C language?</h5>
+
+                                            <div class="shadow p-2 w-75" >
+                                                    <input class="form-check-input border border-3 " type="radio" style="cursor: pointer;" value="" name="vbv" id="flexCheckDefault1.1.1"required>
+                                                    <label class="form-check-label" for="flexCheckDefault1.1.1">Steve Jobs</label>
+                                                </div><br>
+                                                <div class=" shadow  p-2 w-75 ">
+                                                    <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="vbv" id="flexCheckDefaul1.1.2"required>
+                                                    <label class="form-check-label" for="flexCheckDefaul1.1.2">James Gosling</label>
+                                                </div><br>
+                                                <div class="shadow  p-2 w-75  ">
+                                                    <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="vbv" id="flexCheckDefault1.1.3"required>
+                                                    <label class="form-check-label" for="flexCheckDefault1.1.3">Dennis Ritchie</label>
+                                                </div><br>
+                                                <div class=" shadow  p-2 w-75  ">
+                                                    <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="vbv" id="flexCheckDefault1.1.4"required>
+                                                    <label class="form-check-label" for="flexCheckDefault1.1.4">Rasmus Lerdorf</label>
+                                                </div>
+
+                                        </div>
+                                        <br><br>
+                                        <div style="color:black;">
+                                            <h5>2. How do you insert COMMENTS in C code?</h5>
+
+                                            <div class="shadow  p-2 w-75 ">
+                                                <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="asd" id="flexCheckDefault1.2.1"required>
+                                                <label class="form-check-label" for="flexCheckDefault1.2.1">// This is a comment  </label>
+                                            </div><br>
+                                            <div class="shadow  p-2 w-75 ">
+                                                <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" name="asd" value="" id="flexCheckDefault1.2.2"required>
+                                                <label class="form-check-label" for="flexCheckDefault1.2.2"># This is a comment</label>
+                                            </div><br>
+                                            <div class="shadow  p-2 w-75 ">
+                                                <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" name="asd" value="" id="flexCheckDefault1.2.3"required>
+                                                <label class="form-check-label" for="flexCheckDefault1.2.3">* This is a comment</label>
+                                            </div><br>
+                                            <div class="shadow  p-2 w-75 ">
+                                                <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" name="asd" value="" id="flexCheckDefault1.2.4"required>
+                                                <label class="form-check-label" for="flexCheckDefault1.2.4">-- This is a comment</label>
+                                            </div><br><br>
+
+                                        </div>
+                                        <div style="color: black">
+                                        <h5>3. How can you create a variable with the numeric value 5?</h5>
+
+                                        <div class="shadow  p-2 w-75 ">
+                                            <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="zx"  id="flexCheckDefault1.3.1"required>
+                                            <label class="form-check-label" for="flexCheckDefault1.3.1">num = 5 int;</label>
+                                            </div><br>
+                                            <div class="shadow  p-2 w-75 ">
+                                            <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="zx"  id="flexCheckDefault1.3.2"required>
+                                            <label class="form-check-label" for="flexCheckDefault1.3.2">val num = 5;</label>
+                                            </div><br>
+                                            <div class="shadow  p-2 w-75 ">
+                                            <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="zx"  id="flexCheckDefault1.3.3"required>
+                                            <label class="form-check-label" for="flexCheckDefault1.3.3">num = 5;</label>
+                                            </div><br>
+                                            <div class="shadow  p-2 w-75 ">
+                                            <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="zx"  id="flexCheckDefault1.3.4"required>
+                                            <label class="form-check-label" for="flexCheckDefault1.3.4">int num = 5; </label>
+                                            </div>
+
+                                    </div>
+                                    <br><br>
+                                    <div style="color: black;">
+                                        <h5 >4. How can you create a variable with the floating number 2.8?</h5>
+
+                                        <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                            <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="qw"  id="flexCheckDefault1.4.1"required>
+                                            <label class="form-check-label" for="flexCheckDefault1.4.1">num = 2.8 float;</label>
+                                        </div><br>
+                                        <div class="shadow  p-2 w-75 ">
+                                            <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="qw"  id="flexCheckDefault1.4.2"required>
+                                            <label class="form-check-label" for="flexCheckDefault1.4.2">float num = 2.8;  </label>
+                                        </div><br>
+                                        <div class="shadow  p-2 w-75 ">
+                                            <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="qw"  id="flexCheckDefault1.4.3"required>
+                                            <label class="form-check-label" for="flexCheckDefault1.4.3">num = 2.8 double;</label>
+                                        </div><br>
+                                        <div class="shadow  p-2 w-75 ">
+                                            <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="qw"  id="flexCheckDefault1.4.4"required>
+                                            <label class="form-check-label" for="flexCheckDefault1.4.4">val num = 2.8;</label>
+                                        </div>
+                                        <br><br>
+
+                                    </div>
+                                    <div style="color:black; " >
+                                    <h5 > 5. Which operator is used to add together two values?</h5>
+
+                                        <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                        <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="er"  id="flexCheckDefault1.5.1"required>
+                                        <label class="form-check-label" for="flexCheckDefault1.5.1">The + sign  </label>
+                                        </div><br>
+                                        <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                        <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="er"  id="flexCheckDefault1.5.2"required>
+                                        <label class="form-check-label" for="flexCheckDefault1.5.2">The ADD keyword  </label>
+                                        </div><br>
+                                        <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                        <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="er"  id="flexCheckDefault1.5.3"required>
+                                        <label class="form-check-label" for="flexCheckDefault1.5.3">The * sign</label>
+                                        </div><br>
+                                        <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                            <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="er"  id="flexCheckDefault1.5.4"required>
+                                            <label class="form-check-label" for="flexCheckDefault1.5.4">None of This</label>
+                                            </div><br> <br>
+                                    </div>
+                                    <div style="color:black; " >
+                                        <h5 > 6. Which function is often used to output values and print text?</h5>
+
+                                            <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                            <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="c"  id="flexCheckDefault1.6.1"required>
+                                            <label class="form-check-label" for="flexCheckDefault1.6.1">write()</label>
+                                            </div><br>
+                                            <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                            <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="c"  id="flexCheckDefault1.6.2"required>
+                                            <label class="form-check-label" for="flexCheckDefault1.6.2">output()</label>
+                                            </div><br>
+                                            <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                            <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="c"  id="flexCheckDefault1.6.3"required>
+                                            <label class="form-check-label" for="flexCheckDefault1.6.3">printf()</label>
+                                            </div><br>
+                                            <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                                <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="c"  id="flexCheckDefault1.6.4"required>
+                                                <label class="form-check-label" for="flexCheckDefault1.6.4">printword()</label>
+                                                </div><br> <br>
+                                        </div>
+                                        <div style="color:black; " >
+                                            <h5 > 7. Which format specifier is often used to print integers?</h5>
+
+                                                <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                                <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="hi"  id="flexCheckDefault1.7.1"required>
+                                                <label class="form-check-label" for="flexCheckDefault1.7.1">%s</label>
+                                                </div><br>
+                                                <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                                <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="hi"  id="flexCheckDefault1.7.2"required>
+                                                <label class="form-check-label" for="flexCheckDefault1.7.2">%c</label>
+                                                </div><br>
+                                                <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                                <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="hi"  id="flexCheckDefault1.7.3"required>
+                                                <label class="form-check-label" for="flexCheckDefault1.7.3">%d</label>
+                                                </div><br>
+                                                <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                                    <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="hi"  id="flexCheckDefault1.7.4"required>
+                                                    <label class="form-check-label" for="flexCheckDefault1.7.4">%f</label>
+                                                    </div><br><br>
+                                            </div>
+
+                                            <div style="color:black; " >
+                                                <h5 > 8. Which operator can be used to compare two values?</h5>
+
+                                                    <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                                    <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="lk"  id="flexCheckDefault1.8.1"required>
+                                                    <label class="form-check-label" for="flexCheckDefault1.8.1">><</label>
+                                                    </div><br>
+                                                    <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                                    <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="lk"  id="flexCheckDefault1.8.2"required>
+                                                    <label class="form-check-label" for="flexCheckDefault1.8.2">==  </label>
+                                                    </div><br>
+                                                    <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                                    <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="lk"  id="flexCheckDefault1.8.3"required>
+                                                    <label class="form-check-label" for="flexCheckDefault1.8.3"><></label>
+                                                    </div><br>
+                                                    <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                                        <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="lk"  id="flexCheckDefault1.8.4"required>
+                                                        <label class="form-check-label" for="flexCheckDefault1.8.4">=</label>
+                                                        </div><br><br>
+                                                </div>
+
+                                                <div style="color:black; " >
+                                                    <h5 > 9. Which operator can be used to find the memory size (in bytes) of a data type or variable?</h5>
+
+                                                        <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                                        <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="mn"  id="flexCheckDefault1.9.1"required>
+                                                        <label class="form-check-label" for="flexCheckDefault1.9.1">The sizer property</label>
+                                                        </div><br>
+                                                        <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                                        <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="mn"  id="flexCheckDefault1.9.2"required>
+                                                        <label class="form-check-label" for="flexCheckDefault1.9.2">The length property</label>
+                                                        </div><br>
+                                                        <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                                        <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="mn"  id="flexCheckDefault1.9.3"required>
+                                                        <label class="form-check-label" for="flexCheckDefault1.9.3">The sizeof property</label>
+                                                        </div><br>
+                                                        <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                                            <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="mn"  id="flexCheckDefault1.9.4"required>
+                                                            <label class="form-check-label" for="flexCheckDefault1.9.4">The len property</label>
+                                                            </div><br><br>
+                                                    </div>
+
+                                                    <div style="color:black; " >
+                                                        <h5 > 10. Which keyword can be used to make a variable unchangeable/read-only?</h5>
+
+                                                            <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                                            <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="nm"  id="flexCheckDefault1.10.1"required>
+                                                            <label class="form-check-label" for="flexCheckDefault1.10.1">constant</label>
+                                                            </div><br>
+                                                            <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                                            <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="nm"  id="flexCheckDefault1.10.2"required>
+                                                            <label class="form-check-label" for="flexCheckDefault1.10.2">readonly</label>
+                                                            </div><br>
+                                                            <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                                            <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="nm"  id="flexCheckDefault1.10.3"required>
+                                                            <label class="form-check-label" for="flexCheckDefault1.10.3">final</label>
+                                                            </div><br>
+                                                            <div class="shadow  p-2 w-75 " style="cursor: pointer;">
+                                                                <input class="form-check-input border border-3" type="radio" style="cursor: pointer;" value="" name="nm"  id="flexCheckDefault1.10.4"required>
+                                                                <label class="form-check-label" for="flexCheckDefault1.10.4">const</label>
+                                                                </div><br>
+                                                        </div>
+                                    <div class="d-flex justify-content-around">
+                                        <button class="mb-5" style="width: 90px;border-radius: 5px;border: none; height: 30px;background-color: #0f9d58; ;text-align:center; color: #ffff;"> Submit</button>
+                                    </div>
+                            </form><br><br>
+                        </div>
+                </div>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- chat box html  -->
+<div class="container">
+          <div class="row">
+             <div class="col-12">
+                <button class="chatbot-toggler">
+                   <!-- <span class="material-symbols-outlined">mode_comment</span> -->
+                   <iconify-icon class="material-symbols-outlined" icon="ph:chats-teardrop-bold"></iconify-icon>
+                   <span class="material-symbols-outlined"></span>
+                </button>
+                <div class="chatbot">
+                   <header>
+                      <h2>Chatbot</h2>
+                      <span class="close-btn material-symbols-outlined">close</span>
+                   </header>
+                   <ul class="chatbox">
+                      <li class="chat incoming">
+                         <span class="material-symbols-outlined">smart_toy</span>
+                         <p>Hi There &#128075; <br> how can i help you today? </p>
+                      </li>
+                   </ul>
+                   <div class="chat-input">
+                      <textarea placeholder="Enter a message..." required></textarea>
+                      <span id="send-btn" class="material-symbols-outlined">send</span>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+<!-- end of chat box html  -->
+<!-- @endsection  Footer Area -->
+<div class="position-fixed w-100 fixed-bottom" style="background-color: #004080; text-align: center;height: 40px;padding-top: 8px; position: static;">
+    <p>
+      <a href="#"  style="text-decoration: none; text-underline-offset: none;color: #ffff;" >Developed by Axiom TechGuru Pvt. Ltd.</a>
+    </p>
+  </div>
+
+    <!-- Chatbox Script Start -->
+    <script>const targetTab = document.getElementById("C-skilltest");
+        if (targetTab) {
+        targetTab.scrollIntoView({behavior: "smooth", inline:"center"})
+        }
+        // responsive Slider
+      function adjustDivWidth() {
+      const screenWidth = window.innerWidth;
+      const myDiv = document.querySelector('#scroll_div');
+
+      if (screenWidth <= 667) { // Decrease width for smaller screens
+        myDiv.style.width = '280px';
+      }else if(screenWidth <= 1100){
+         myDiv.style.width = '510px';
+      }
+      else {
+        // Increase width for larger screens
+        myDiv.style.width = '910px';
+      }
+    }
+
+    // Initial adjustment when the page loads
+    adjustDivWidth();
+
+    // Listen for window resize events and adjust the div width accordingly
+    window.addEventListener('resize', adjustDivWidth);
+
+
+    </script>
+    <script src="js_css/skill.js" defer></script>
+
+    <!-- Chatbox Script End -->
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+</body>
+</html>

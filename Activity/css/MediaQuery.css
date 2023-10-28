@@ -1,0 +1,113 @@
+/*this page is build  for keeping selected date background colour in center for different screen side only */
+@media(min-width: 359px) and (max-width: 389px){
+    tbody td:after {
+      position: absolute;
+      top: 50%;
+      left: -5px;
+      right: 0;
+      bottom: 0;
+      content: '';
+      width: 30px;
+      height: 30px;
+      margin: 0 auto;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      border-radius: 50%;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      z-index: -1;
+   }
+  }
+@media(min-width: 390px) and (max-width: 395px){
+    tbody td:after {
+      position: absolute;
+      top: 50%;
+      left: -1px;
+      right: 0;
+      bottom: 0;
+      content: '';
+      width: 30px;
+      height: 30px;
+      margin: 0 auto;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      border-radius: 50%;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      z-index: -1;
+   }
+  }
+
+  @media(min-width: 990px) and (max-width: 1115px){
+    tbody td:after {
+      position: absolute;
+      top: 50%;
+      left: -4px;
+      right: 0;
+      bottom: 0;
+      content: '';
+      width: 29px;
+      height: 29px;
+      margin: 0 auto;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      border-radius: 50%;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      z-index: -1;
+   }
+  }
+
+/* if needed delete from here and uncomment from style.css file */
+  @media (prefers-reduced-motion: reduce) {
+    tbody td:after {
+      -webkit-transition: none;
+      -o-transition: none;
+      transition: none; } }
+
+  @media (max-width: 767.98px) {
+        .calendar-wrap {
+          width: 100%; } }
+
+  @media (max-width: 767.98px) {
+          .wrap-header {
+            width: 100%;
+            padding: 20px 0; } }
+
+            @media (min-width: 576px) {
+              .text-sm-left {
+                text-align: left !important; }
+              .text-sm-right {
+                text-align: right !important; }
+              .text-sm-center {
+                text-align: center !important; } }
+            
+            @media (min-width: 768px) {
+              .text-md-left {
+                text-align: left !important; }
+              .text-md-right {
+                text-align: right !important; }
+              .text-md-center {
+                text-align: center !important; } }
+            
+            @media (min-width: 992px) {
+              .text-lg-left {
+                text-align: left !important; }
+              .text-lg-right {
+                text-align: right !important; }
+              .text-lg-center {
+                text-align: center !important; } }
+            
+            @media (min-width: 1200px) {
+              .text-xl-left {
+                text-align: left !important; }
+              .text-xl-right {
+                text-align: right !important; }
+              .text-xl-center {
+                text-align: center !important; } }
