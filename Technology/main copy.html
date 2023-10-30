@@ -1,966 +1,993 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"crossorigin="anonymous"></script>
- 
-    <script src="https://kit.fontawesome.com/439a542074.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="Technology1.css">
-<script src="./tech.js"></script>
-    <title>c</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"crossorigin="anonymous"></script>
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <script src="https://kit.fontawesome.com/439a542074.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="Technology1.css">
+        <link rel="stylesheet" href="./chat.css">
+        <script src="./chat.js" defer></script>
+    <script src="./tech.js"></script>
+        <title>Technology</title>
+        <link rel="icon" href="../Images/guru.png"/>
 
-    <style>
-    
-      .hovern:hover {
-        background-color: #004080;
-       
-        color: #fcfcfc;
-        text-align: center;
-      }
-      .hovern.active {
-    background-color: #004080;
-    color: #fff;
-    text-align: center;
-}
-.hove{
-    color: #004080;
-    background-color:#ffffff;
-
-}
-.hove:hover {
-        background-color: #004080;
-        color: #fcfcfc;
+        <style>
         
-      }
-      button.clicked {
+        .hovern:hover {
             background-color: #004080;
-            color: white;
+        
+            color: #fcfcfc;
+            text-align: center;
         }
-    </style>
-</head>
-<body class="user-select-none">
-    <div class="header">
-        <nav class="navbar position-fixed w-100 z-1" style="background-color: #004080; z-index:1;">
-            <div class="container-fluid mx-2">
-              <button class="navbar-toggler me-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                    aria-controls="offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button> 
-                <a href="#">
-                    <i class="fa-solid fa-bell  float-end" style="color: #fcfcfc;"></i>
-                </a>  
-            </div>
-        </nav>
-    </div>
+        .hovern.active {
+        background-color: #004080;
+        color: #fff;
+        text-align: center;
+    }
+    .hove{
+        color: #004080;
+        background-color:#ffffff;
 
-    <!-- sidebar of VIP -->
-<div class="container-fluid ">
-    <div class="row flex-nowrap">
-        <div class="col-2 col-sm-3 col-md-3 shadow-lg  position-fixed  top-0 start-0 col-lg-2 px-sm-1  bg-light" >
-            <div class="d-flex flex-column mx-auto  align-items-sm-center  pt-2 text-dark min-vh-100">
-                <!-- VIP Logo -->
-                <a href="#" data-bs-toggle="collapse" class="nav-link px-0  align-middle mt-3 ">
-                    <img src="./Axiom VIP Images/logo.png" class="mt-5 img-fluid" alt="Axiom VIP" width="80" height="50"></a>
-                <!-- User Section -->
-                <div class="mt-3" >
-                    <img src="https://github.com/mdo.png" alt="Profile" width="50" height="50" class="rounded-circle  mx-sm-5">
-                    <a href="#" class="d-flex align-items-center text-primary text-decoration-none dropdown dropdown-toggle justify-content-center text-center my-3" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="d-none d-sm-inline">It's SK </span>
-                    </a>
-                    <hr style="color: #004080;">
-                    <!-- Dropdown for Profile Options -->
-                    <ul class="dropdown-menu dropdown-menu-light text-small  shadow">
-                        <li class="hovern" style="padding-left: 3px; padding-right: 3px;"><a style="color: #004080;" class="dropdown-item " href="#"> <i class="fa-solid fa-street-view"></i> View Profile</a></li>
-                        <li >
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li class="hovern" style="padding-left: 3px; padding-right: 3px;"><a style="color: #004080;" class="dropdown-item" href="#"> <i class="fa-solid fa-user-pen"></i> Edit Profile</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li class="hovern" style="padding-left: 3px; padding-right: 3px;"><a style="color: #004080;" class="dropdown-item" href="#"> <i class="fa-solid fa-right-from-bracket fa-rotate-180"></i> Log Out</a></li>
-                    </ul>
+    }
+    .hove:hover {
+            background-color: #004080;
+            color: #fcfcfc;
+            
+        }
+        button.clicked {
+                background-color: #004080;
+                color: white;
+            }
+        </style>
+    </head>
+    <body class="user-select-none">
+        <div class="header">
+            <nav class="navbar position-fixed w-100 z-1" style="background-color: #004080; z-index:1;">
+                <div class="container-fluid mx-2">
+                <button class="navbar-toggler me-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                        aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button> 
+                    <a href="#">
+                        <i class="fa-solid fa-bell  float-end" style="color: #fcfcfc;"></i>
+                    </a>  
                 </div>
-            
-            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                <li class="nav-item  rounded-2 my-1 shadow-sm">
-                    <a href="#" class="nav-link w-100 hovern align-middle hovern" >
-                            <i class="fa-solid fa-house-chimney"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+            </nav>
+        </div>
+
+        <!-- sidebar of VIP -->
+    <div class="container-fluid ">
+        <div class="row flex-nowrap">
+            <div class="col-2 col-sm-3 col-md-3 shadow-lg  position-fixed  top-0 start-0 col-lg-2 px-sm-1  bg-light" >
+                <div class="d-flex flex-column mx-auto  align-items-sm-center  pt-2 text-dark min-vh-100">
+                    <!-- VIP Logo -->
+                    <a href="#" data-bs-toggle="collapse" class="nav-link px-0  align-middle mt-3 ">
+                        <img src="../Images/Axiom_VIP_logo.png" class="mt-5 img-fluid" alt="Axiom VIP" width="80" height="50"></a>
+                    <!-- User Section -->
+                    <div class="mt-3" >
+                        <img src="https://github.com/mdo.png" alt="Profile" width="50" height="50" class="rounded-circle  mx-sm-5">
+                        <a href="#" class="d-flex align-items-center text-primary text-decoration-none dropdown dropdown-toggle justify-content-center text-center my-3" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="d-none d-sm-inline">It's SK </span>
+                        </a>
+                        <hr style="color: #004080;">
+                        <!-- Dropdown for Profile Options -->
+                        <ul class="dropdown-menu dropdown-menu-light text-small  shadow z-2">
+                            <li class="hovern" style="padding-left: 3px; padding-right: 3px;"><a style="color: #004080;" class="dropdown-item " href="#"> <i class="fa-solid fa-street-view"></i> View Profile</a></li>
+                            <li >
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="hovern" style="padding-left: 3px; padding-right: 3px;"><a style="color: #004080;" class="dropdown-item" href="#"> <i class="fa-solid fa-user-pen"></i> Edit Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="hovern" style="padding-left: 3px; padding-right: 3px;"><a style="color: #004080;" class="dropdown-item" href="#"> <i class="fa-solid fa-right-from-bracket fa-rotate-180"></i> Log Out</a></li>
+                        </ul>
+                    </div>
+                
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item w-100 rounded-2 my-1 shadow-sm">
+                        <a href="#" class="nav-link hovern align-middle hovern" >
+                                <i class="fa-solid fa-house-chimney"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                        </a>
+                    </li>
+                    <li class="w-100 rounded-2 my-1 shadow-sm">
+                        <a href="#submenu1" data-bs-toggle="collapse" class="nav-link hovern align-middle">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i> <span class="ms-1  d-none d-sm-inline">Analyze</span> </a>
+                        <ul class="collapse flex-column ms-1 list-unstyled" id="submenu1" data-bs-parent="#menu">
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="#" class="nav-link  hovern px-0 hovern"> <i class="fa-solid fa-bars-progress hovern"></i> <span class="d-none d-sm-inline">Progress Report</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="#" class="nav-link hovern px-0 hovern"> <i class="fa-solid fa-flag hovern"></i> <span class="d-none d-sm-inline">Session Report</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="w-100  rounded-2 my-1 shadow-sm">
+                        <a href="#submenu2" data-bs-toggle="collapse" class="nav-link  hovern hovern align-middle ">
+                            <i class="fa-solid fa-table"></i> <span class="ms-1 d-none d-sm-inline">Technology</span></a>
+                        <ul class="collapse flex-column ms-1  list-unstyled" id="submenu2" data-bs-parent="#menu" style="max-height: 120px; overflow-y: scroll;">
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../devicon-master/devicon-master/icons/figma/figma-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">FIGMA</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link hovern  px-0 hovern"> <img src="../devicon-master/devicon-master/icons/c/c-original.svg" alt="" width="20px"> <span class="d-none hovern w-100 d-sm-inline">C</span></a>
+                            </li>
+                            <li  class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern hovern"> <img src="../devicon-master/devicon-master/icons/cplusplus/cplusplus-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">C++</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../devicon-master/devicon-master/icons/html5/html5-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">HTML</span></a>
+                            </li>
+                            <li  class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../devicon-master/devicon-master/icons/css3/css3-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">CSS</span></a>
+                            </li>
+                            <li  class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../devicon-master/devicon-master/icons/bootstrap/bootstrap-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">BOOTSTRAP</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm"> 
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../devicon-master/devicon-master/icons/javascript/javascript-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">JAVASCRIPT</span></a>
+                            </li>
+                            <li  class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../devicon-master/devicon-master/icons/jquery/jquery-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">JQUERY</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../devicon-master/devicon-master/icons/laravel/laravel-plain.svg" alt="" width="20px"> <span class="d-none d-sm-inline">LARAVEL</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../devicon-master/devicon-master/icons/php/php-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">PHP</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../devicon-master/devicon-master/icons/python/python-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">PYTHON</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../devicon-master/devicon-master/icons/java/java-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">JAVA</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../Images/ajax.png" alt="" width="20px"> <span class="d-none d-sm-inline">AJAX</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../devicon-master/devicon-master/icons/angularjs/angularjs-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">ANGULAR</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../devicon-master/devicon-master/icons/tailwindcss/tailwindcss-plain.svg" alt="" width="20px"> <span class="d-none d-sm-inline">TAILWIND CSS</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../devicon-master/devicon-master/icons/react/react-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">REACT NATIVE</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../devicon-master/devicon-master/icons/flutter/flutter-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">FLUTTER</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../Images/mean.png" alt="" width="20px"> <span class="d-none d-sm-inline">MEAN STACK</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"><img src="../Images/mern.png" alt="" width="22px"> <span class="d-none d-sm-inline">MERN STACK</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../devicon-master/devicon-master/icons/github/github-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">GITHUB</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../devicon-master/devicon-master/icons/django/django-plain.svg" alt="" width="20px"> <span class="d-none d-sm-inline">DJANGO</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li  class="w-100  rounded-2 my-1 shadow-sm">
+                        <a href="#submenu3" data-bs-toggle="collapse" class=" nav-link  hovern align-middle">
+                            <i class="fa-solid fa-bookmark"></i> <span class="ms-1 d-none d-sm-inline">Acitvity</span> </a>
+                            <ul class="collapse flex-column ms-1 list-unstyled" id="submenu3" data-bs-parent="#menu">
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="#" class="nav-link px-0 hovern"> <i class="fa-solid fa-calendar-days"></i> <span class="d-none d-sm-inline">Calender</span></a>
+                            </li>
+                            <li  class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="#" class="nav-link px-0 hovern"> <i class="fa-solid fa-hand-sparkles"></i> <span class="d-none d-sm-inline">Events</span></a>
+                            </li>
+                            <li  class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="#" class="nav-link px-0 hovern"> <i class="fa-solid fa-file-lines"></i> <span class="d-none d-sm-inline">Skill Test</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                <hr>
+                <li class="nav-item  rounded-2 my-1 shadow-sm w-100">
+                    <a href="#" class="nav-link align-middle hovern ">
+                        <i class="fa-solid fa-right-from-bracket fa-rotate-180"></i> <span class="ms-1 d-none d-sm-inline">Log Out</span>
                     </a>
                 </li>
-                <li class="w-100 rounded-2 my-1 shadow-sm">
-                    <a href="#submenu1" data-bs-toggle="collapse" class="nav-link hovern align-middle">
-                        <i class="fa-solid fa-magnifying-glass-chart"></i> <span class="ms-1  d-none d-sm-inline">Analyze</span> </a>
-                    <ul class="collapse flex-column ms-1 list-unstyled" id="submenu1" data-bs-parent="#menu">
-                        <li class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="#" class="nav-link  hovern px-0 hovern"> <i class="fa-solid fa-bars-progress hovern"></i> <span class="d-none d-sm-inline">Progress Report</span></a>
-                        </li>
-                        <li class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="#" class="nav-link hovern px-0 hovern"> <i class="fa-solid fa-flag hovern"></i> <span class="d-none d-sm-inline">Session Report</span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="w-100  rounded-2 my-1 shadow-sm">
-                    <a href="#submenu2" data-bs-toggle="collapse" class="nav-link  hovern hovern align-middle ">
-                        <i class="fa-solid fa-table"></i> <span class="ms-1 d-none d-sm-inline">Technology</span></a>
-                    <ul class="collapse flex-column ms-1  list-unstyled" id="submenu2" data-bs-parent="#menu" style="max-height: 120px; overflow-y: scroll;">
-                        <li class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/figma/figma-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">FIGMA</span></a>
-                        </li>
-                        <li class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link hovern  px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/c/c-original.svg" alt="" width="20px"> <span class="d-none hovern w-100 d-sm-inline">C</span></a>
-                        </li>
-                        <li  class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern hovern"> <img src="../../devicon-master/devicon-master/icons/cplusplus/cplusplus-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">C++</span></a>
-                        </li>
-                        <li class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/html5/html5-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">HTML</span></a>
-                        </li>
-                        <li  class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/css3/css3-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">CSS</span></a>
-                        </li>
-                        <li  class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/bootstrap/bootstrap-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">BOOTSTRAP</span></a>
-                        </li>
-                        <li class="w-100  rounded-2 my-1 shadow-sm"> 
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/javascript/javascript-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">JAVASCRIPT</span></a>
-                        </li>
-                        <li  class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/jquery/jquery-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">JQUERY</span></a>
-                        </li>
-                        <li class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/laravel/laravel-plain.svg" alt="" width="20px"> <span class="d-none d-sm-inline">LARAVEL</span></a>
-                        </li>
-                        <li class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/php/php-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">PHP</span></a>
-                        </li>
-                        <li class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/python/python-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">PYTHON</span></a>
-                        </li>
-                        <li class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/java/java-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">JAVA</span></a>
-                        </li>
-                        <li class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../Images/ajax.png" alt="" width="20px"> <span class="d-none d-sm-inline">AJAX</span></a>
-                        </li>
-                        <li class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/angularjs/angularjs-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">ANGULAR</span></a>
-                        </li>
-                        <li class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/tailwindcss/tailwindcss-plain.svg" alt="" width="20px"> <span class="d-none d-sm-inline">TAILWIND CSS</span></a>
-                        </li>
-                        <li class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/react/react-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">REACT NATIVE</span></a>
-                        </li>
-                        <li class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/flutter/flutter-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">FLUTTER</span></a>
-                        </li>
-                        <li class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../Images/mean.png" alt="" width="20px"> <span class="d-none d-sm-inline">MEAN STACK</span></a>
-                        </li>
-                        <li class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern"><img src="../../Images/mern.png" alt="" width="22px"> <span class="d-none d-sm-inline">MERN STACK</span></a>
-                        </li>
-                        <li class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/github/github-original.svg" alt="" width="20px"> <span class="d-none d-sm-inline">GITHUB</span></a>
-                        </li>
-                        <li class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="../Technology/main copy.html" class="nav-link px-0 hovern"> <img src="../../devicon-master/devicon-master/icons/django/django-plain.svg" alt="" width="20px"> <span class="d-none d-sm-inline">DJANGO</span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li  class="w-100  rounded-2 my-1 shadow-sm">
-                    <a href="#submenu3" data-bs-toggle="collapse" class=" nav-link  hovern align-middle">
-                        <i class="fa-solid fa-bookmark"></i> <span class="ms-1 d-none d-sm-inline">Acitvity</span> </a>
-                        <ul class="collapse flex-column ms-1 list-unstyled" id="submenu3" data-bs-parent="#menu">
-                        <li class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="#" class="nav-link px-0 hovern"> <i class="fa-solid fa-calendar-days"></i> <span class="d-none d-sm-inline">Calender</span></a>
-                        </li>
-                        <li  class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="#" class="nav-link px-0 hovern"> <i class="fa-solid fa-hand-sparkles"></i> <span class="d-none d-sm-inline">Events</span></a>
-                        </li>
-                        <li  class="w-100  rounded-2 my-1 shadow-sm">
-                            <a href="#" class="nav-link px-0 hovern"> <i class="fa-solid fa-file-lines"></i> <span class="d-none d-sm-inline">Skill Test</span></a>
-                        </li>
-                    </ul>
-                </li>
-            <hr>
-            <li class="nav-item  rounded-2 my-1 shadow-sm w-100">
-                <a href="#" class="nav-link align-middle hovern ">
-                    <i class="fa-solid fa-right-from-bracket fa-rotate-180"></i> <span class="ms-1 d-none d-sm-inline">Log Out</span>
-                </a>
-            </li>
-            
-            </div>
-    </div>
+                
+                </div>
+        </div>
 
-        <!-- content of right side data -->
-        <div class="col-10 col-md-9  col-sm-9  ms-sm-auto  col-lg-10  px-md-4 py-3" style="margin-left: 60px;">
-            <div>
-                <div class="container-fluid">
-                    <!--main container div start-->
-    
-                    <div class="row m-0 p-0">
-                        <!--row start-->
-    
-                        <!-- div video Start -->
-                        <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 m-0 mt-3 p-0" style="z-index: -1;">
-                    <h4 style="color: #004080;" class="fw-semibold  mt-5 ">Structured Oriented Programming Using C</h4>
+            <!-- content of right side data -->
+            <div class="col-10 col-md-9  col-sm-9  ms-sm-auto  col-lg-10  px-md-4 py-3" style="margin-left: 60px;">
+                <div>
+                    <div class="container-fluid">
+                        <!--main container div start-->
+        
+                        <div class="row m-0 p-0">
+                            <!--row start-->
+        
+                            <!-- div video Start -->
+                            <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 m-0 mt-3 p-0">
+                        <h4 style="color: #004080;" class="fw-semibold  mt-5 ">Structured Oriented Programming Using C</h4>
 
-                            <video class="img-fluid" width="900" height="540"  controls>
-                                <source src="../Axiom VIP Images/session_v_t1_tp1_st1_1.mp4" type="video/mp4">
-    
-                            </video>
-                        </div>
-                        <!--div video end-->
-    
-                        <!-- div main button Start-->
-                        <div class="col-xl-4 col-lg-4 col-md-8 col-sm-12 col-xs-12 rounded-3 mt-5 p-xl-4    ">
-    
-                            <h4 class="text-center mt-3 user-select-none" style="color: #004080;  font-family: 'Inria Sans', sans-serif;font-weight: bold;">
-                                Sessions
-                            </h4>
-                            
-                            
-                            <!-- Dropdown button 1 -->
-                            <div style="overflow-y: scroll;height:360px;"> 
-    
-                             <div class="accordion"  id="accordionExample"> 
-
-                                <div class="my-1  accordion-item border-white">
-                                    <div class="accordion-header"   >
-                                        <button   class=" hove  fw-bold fs-5 collapsed   p-2 border border-1 shadow-sm  rounded-4 w-100 " onclick="showDropdown(this)"  
-                                       type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                            <span class="float-start">1.&ensp;Basic</span>
-                                        </button>
-                                    </div>
-                                    <div id="collapse2" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
-                                                <div class=" text-center fw-bold hove p-2  border border-1 rounded-4 fs-6">Basic Programming And Practice</div>
-                                    </div> 
+                        <video class="img-fluid" width="900" height="540" controls>
+                            <source src="./Axiom VIP Images/session_v_t1_tp1_st1_1.mp4" type="video/mp4">
+                        </video>
+                                    
                                 </div>
+                            <!--div video end-->
+        
+                            <!-- div main button Start-->
+                            <div class="col-xl-4 col-lg-4 col-md-8 col-sm-12 col-xs-12 rounded-3 mt-5 p-xl-4    ">
+        
+                                <h4 class="text-center mt-3 user-select-none" style="color: #004080;  font-family: 'Inria Sans', sans-serif;font-weight: bold;">
+                                    Sessions
+                                </h4>
+                                
+                                
+                                <!-- Dropdown button 1 -->
+                                <div style="overflow-y: scroll;height:360px;"> 
+        
+                                <div class="accordion"  id="accordionExample"> 
 
+                                    <div class="my-1  accordion-item border-white">
+                                        <div class="accordion-header"   >
+                                            <button   class=" hove  fw-bold fs-5 collapsed   p-2 border border-1 shadow-sm  rounded-4 w-100 " onclick="showDropdown(this)"  
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                                <span class="float-start">1.&ensp;Basic</span>
+                                            </button>
+                                        </div>
+                                        <div id="collapse2" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+                                                    <div class=" text-center fw-bold hove p-2  border border-1 rounded-4 fs-6">Basic Programming And Practice</div>
+                                        </div> 
+                                    </div>
+
+                                    <div class="my-1  accordion-item border-white">
+                                        <div class="accordion-header">
+                                            <button class=" hove  fw-bold fs-5 collapsed   p-2 border border-1 shadow-sm  rounded-4 w-100 " onclick="showDropdown(this)"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                                <span class="float-start">2.&ensp;Datatypes in C</span>
+                                            </button>
+                                        </div>
+                                        <div id="collapse1" class="accordion-collapse collapse mt-1"  data-bs-parent="#accordionExample">
+                                                    <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Datatypes</div>
+                                        </div> 
+                                    </div>  
+
+                                    <div class="my-1  accordion-item border-white">
+                                        <div class="accordion-header">
+                                            <button class=" hove  fw-bold fs-5 collapsed   p-2 border border-1 shadow-sm  rounded-4 w-100 " onclick="showDropdown(this)"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                                <span class="float-start">3.&ensp;Operator in C</span>
+                                            </button>
+                                        </div>
+                                        <div id="collapse3" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+                                                    <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Operator</div>
+                                        </div> 
+                                    </div>   
+                                
+                                
                                 <div class="my-1  accordion-item border-white">
                                     <div class="accordion-header">
                                         <button class=" hove  fw-bold fs-5 collapsed   p-2 border border-1 shadow-sm  rounded-4 w-100 " onclick="showDropdown(this)"
-                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                            <span class="float-start">2.&ensp;Datatypes in C</span>
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                            <span class="float-start">4.&nbsp;Conditional & Branching in C</span>
                                         </button>
                                     </div>
-                                    <div id="collapse1" class="accordion-collapse collapse mt-1"  data-bs-parent="#accordionExample">
-                                                <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Datatypes</div>
-                                    </div> 
-                                </div>  
-
-                                <div class="my-1  accordion-item border-white">
-                                    <div class="accordion-header">
-                                        <button class=" hove  fw-bold fs-5 collapsed   p-2 border border-1 shadow-sm  rounded-4 w-100 " onclick="showDropdown(this)"
-                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                            <span class="float-start">3.&ensp;Operator in C</span>
-                                        </button>
-                                    </div>
-                                    <div id="collapse3" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
-                                                <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Operator</div>
+                                    <div id="collapse4" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+                                                <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Conditional & Branching</div>
                                     </div> 
                                 </div>   
-                              
-                              
-                            <div class="my-1  accordion-item border-white">
-                                <div class="accordion-header">
-                                    <button class=" hove  fw-bold fs-5 collapsed   p-2 border border-1 shadow-sm  rounded-4 w-100 " onclick="showDropdown(this)"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                        <span class="float-start">4.&nbsp;Conditional & Branching in C</span>
-                                    </button>
-                                </div>
-                                <div id="collapse4" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
-                                            <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Conditional & Branching</div>
-                                </div> 
-                            </div>   
-                         
-
-                             <div class="my-1  accordion-item border-white">
-                                <div class="accordion-header">
-                                    <button class=" hove  fw-bold fs-5 collapsed   p-2 border border-1 shadow-sm  rounded-4 w-100 " onclick="showDropdown(this)"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                        <span class="float-start">5.&ensp;Looping in C</span>
-                                    </button>
-                                </div>
-                                <div id="collapse5" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
-                                            <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Looping </div>
-                                            <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Looping Techniques</div>
-                                            <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Nested Looping</div>
-
-                                </div> 
-                            </div>  
-                             
-
-                             <div class="my-1  accordion-item border-white">
-                                <div class="accordion-header">
-                                    <button class=" hove  fw-bold fs-5 collapsed   p-2 border border-1 shadow-sm  rounded-4 w-100 " onclick="showDropdown(this)"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                                        <span class="float-start">6.&ensp;Storage Classes</span>
-                                    </button>
-                                </div>
-                                <div id="collapse6" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
-                                            <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Storage Classes</div>
-                                </div> 
-                            </div>  
-                             
-                             
-                             <div class="my-1  accordion-item border-white">
-                                <div class="accordion-header">
-                                    <button class=" hove  fw-bold fs-5 collapsed   p-2 border border-1 shadow-sm  rounded-4 w-100 " onclick="showDropdown(this)"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
-                                        <span class="float-start">7.&ensp;Function</span>
-                                    </button>
-                                </div>
-                                <div id="collapse7" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
-                                            <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Nested Function</div>
-                                </div> 
-                            </div>  
                             
 
-                             <div class="my-1  accordion-item border-white">
-                                <div class="accordion-header">
-                                    <button class=" hove  fw-bold fs-5 collapsed   p-2 border border-1 shadow-sm  rounded-4 w-100 " onclick="showDropdown(this)"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
-                                        <span class="float-start">8.&ensp;Recursion</span>
-                                    </button>
-                                </div>
-                                <div id="collapse8" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
-                                            <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Recursion</div>
-                                </div> 
-                            </div>  
-                            
-
-                             <div class="my-1  accordion-item border-white">
-                                <div class="accordion-header">
-                                    <button class=" hove  fw-bold fs-5 collapsed   p-2 border border-1 shadow-sm  rounded-4 w-100 " onclick="showDropdown(this)"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
-                                        <span class="float-start">9.&ensp;String Manipulation</span>
-                                    </button>
-                                </div>
-                                <div id="collapse9" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
-                                            <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">String Manipulation</div>
-                                </div> 
-                            </div>  
-                            
-
-                             <div class="my-1  accordion-item border-white">
-                                <div class="accordion-header">
-                                    <button class=" hove  fw-bold fs-5 collapsed   p-2 border border-1 shadow-sm  rounded-4 w-100 " onclick="showDropdown(this)"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
-                                        <span class="float-start">10.&ensp;Array</span>
-                                    </button>
-                                </div>
-                                <div id="collapse10" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
-                                            <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Array 1D,2D and multi D</div>
-                                            <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Array Matrix</div>
-
-                                </div> 
-                            </div>  
-                          
-                         </div>  
-                    </div>
-                                
-                               
-                            </div>
-    
-                        </div>
-    
-    
-                        <!--row Div-->
-                    </div>
-                    <!--row End-->
-    
-                    <div class="row m-0 p-0">
-                        <div class="col-xl-7 col-lg-7 d-xl-flex col-md-10  col-sm-6 col-6 ms-xl-5  d-xl-flex mt-3 mb-5  ">
-                            <div class="me-2"> 
-                           <button class="democode btn py-1 px-4 fw-bold  " id="not" onclick="toggleButtons(this, this.nextElementSibling)">Notes</button><br>
-                           <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="note" class=" btn mt-3 pt-1 pb-1  abtn fw-bold  ">1.&nbsp;Notes&ensp;<a> <i class="fa-solid fa-eye" style="color: #ffffff;"></i></a></button>       
-                           <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal3"   id="present" class=" btn mt-3 pt1 pb-1  abtn fw-bold "  >2.&nbsp;Presentation&ensp;<i class="fa-solid fa-eye" style="color: #ffffff;"></i></button>       
-                        </div>
-                        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog modal-xl modal-dialog-scrollable">
-                              <div class="modal-content">
-                        
-                                <div class="modal-header">
-                                  <h1 class="modal-title fs-5 " id="exampleModalLabel">Basic Of C Programming</h1>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body" style="height: 700px;">
-                                    <iframe class="img-fluid text-center h-100 w-100" src="./Axiom VIP Images/basic notes.pdf"   frameborder="0">
-                        
-                                    </iframe>
-                                </div>
-                                
-                              </div>
-                            </div>
-                          </div>
-    
-                          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog modal-fullscreen modal-dialog-scrollable">
-                              <div class="modal-content">
-                        
-                                <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Basic Of C Programming</h1>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body" style="height: 700px;">
-                                    <iframe class="img-fluid text-center h-100 w-100" src="./Axiom VIP Images/basic notes.pdf"   frameborder="0">
-                        
-                                    </iframe>
-                                </div>
-                                
-                              </div>
-                            </div>
-                          </div>
-                        <!-- </div>
-            
-                        <div class="col col-lg-2 col-md-2 col-sm-8 border "> -->
-                            <div class="me-2">
-                                <button class="democode btn py-1 px-4  fw-bold   " id="dem" onclick="toggleButtons(this, this.nextElementSibling)">Demo&nbsp;codes</button><br>
-                               <button  id="demo1" data-bs-target="#exampleModal237" data-bs-toggle="modal" class=" btn mt-3 pt-1 pb-1  abtn fw-bold "  >1.&ensp;Demo&nbsp;codes&emsp;<a ><i class="fa-solid fa-eye" style="color: #ffffff;"></i></a></button>       
-                               <button  id="demo2" data-bs-target="#exampleModal236" data-bs-toggle="modal" class=" btn mt-3 pt-1 pb-1 abtn fw-bold "  >1.&ensp;Demo&nbsp;codes&emsp;<i class="fa-solid  fa-eye" style="color: #ffffff;"></i></button>       
-                            </div>
-                          <div class="modal fade" id="exampleModal236" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog modal-xl modal-dialog-scrollable">
-                                  <div class="modal-content">
-                            
-                                    <div class="modal-header">
-                                      <h1 class="modal-title fs-5" id="exampleModalLabel">Basic Of C Programming</h1>
-                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <div class="my-1  accordion-item border-white">
+                                    <div class="accordion-header">
+                                        <button class=" hove  fw-bold fs-5 collapsed   p-2 border border-1 shadow-sm  rounded-4 w-100 " onclick="showDropdown(this)"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                            <span class="float-start">5.&ensp;Looping in C</span>
+                                        </button>
                                     </div>
-                                    <div class="modal-body" style="height: 700px;">
-                                        <iframe class="img-fluid text-center h-100 w-100" src="./Axiom VIP Images/ibill.c"   frameborder="0">
-                            
-                                        </iframe>
+                                    <div id="collapse5" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+                                                <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Looping </div>
+                                                <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Looping Techniques</div>
+                                                <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Nested Looping</div>
+
+                                    </div> 
+                                </div>  
+                                
+
+                                <div class="my-1  accordion-item border-white">
+                                    <div class="accordion-header">
+                                        <button class=" hove  fw-bold fs-5 collapsed   p-2 border border-1 shadow-sm  rounded-4 w-100 " onclick="showDropdown(this)"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                            <span class="float-start">6.&ensp;Storage Classes</span>
+                                        </button>
                                     </div>
+                                    <div id="collapse6" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+                                                <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Storage Classes</div>
+                                    </div> 
+                                </div>  
+                                
+                                
+                                <div class="my-1  accordion-item border-white">
+                                    <div class="accordion-header">
+                                        <button class=" hove  fw-bold fs-5 collapsed   p-2 border border-1 shadow-sm  rounded-4 w-100 " onclick="showDropdown(this)"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                                            <span class="float-start">7.&ensp;Function</span>
+                                        </button>
+                                    </div>
+                                    <div id="collapse7" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+                                                <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Nested Function</div>
+                                    </div> 
+                                </div>  
+                                
+
+                                <div class="my-1  accordion-item border-white">
+                                    <div class="accordion-header">
+                                        <button class=" hove  fw-bold fs-5 collapsed   p-2 border border-1 shadow-sm  rounded-4 w-100 " onclick="showDropdown(this)"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                                            <span class="float-start">8.&ensp;Recursion</span>
+                                        </button>
+                                    </div>
+                                    <div id="collapse8" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+                                                <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Recursion</div>
+                                    </div> 
+                                </div>  
+                                
+
+                                <div class="my-1  accordion-item border-white">
+                                    <div class="accordion-header">
+                                        <button class=" hove  fw-bold fs-5 collapsed   p-2 border border-1 shadow-sm  rounded-4 w-100 " onclick="showDropdown(this)"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                                            <span class="float-start">9.&ensp;String Manipulation</span>
+                                        </button>
+                                    </div>
+                                    <div id="collapse9" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+                                                <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">String Manipulation</div>
+                                    </div> 
+                                </div>  
+                                
+
+                                <div class="my-1  accordion-item border-white">
+                                    <div class="accordion-header">
+                                        <button class=" hove  fw-bold fs-5 collapsed   p-2 border border-1 shadow-sm  rounded-4 w-100 " onclick="showDropdown(this)"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                                            <span class="float-start">10.&ensp;Array</span>
+                                        </button>
+                                    </div>
+                                    <div id="collapse10" class="accordion-collapse collapse"  data-bs-parent="#accordionExample">
+                                                <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Array 1D,2D and multi D</div>
+                                                <div class=" text-center fw-bold hove p-2 border border-1 rounded-4 fs-6">Array Matrix</div>
+
+                                    </div> 
+                                </div>  
+                            
+                            </div>  
+                        </div>
                                     
-                                  </div>
+                                
                                 </div>
-                              </div>
         
-                              <div class="modal fade" id="exampleModal237" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog modal-xl modal-dialog-scrollable">
-                                  <div class="modal-content">
-                            
-                                    <div class="modal-header">
-                                      <h1 class="modal-title fs-5" id="exampleModalLabel">Basic Of C Programming</h1>
-                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body" style="height: 700px;">
-                                        <iframe class="img-fluid text-center h-100 w-100" src="./Axiom VIP Images/basic demo code 2.C"   frameborder="0">
-                            
-                                        </iframe>
-                                    </div>
-                                    
-                                  </div>
-                                </div>
-                              </div>
-
-                                <div class="me-2">                    <button class=" btn py-1 px-4 democode fw-bold" id="assi" onclick="toggleButtons(this, this.nextElementSibling)">Assignments</button><br>
-                                      <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"  id="assi1" class=" btn mt-3 pt-1 pb-1  abtn fw-bold "  >1.&ensp;Assignment &emsp;<i class="fa-solid fa-eye" style="color: #ffffff;"></i></button>       
-                                      <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" id="assi2" class=" btn mt-3 pt1 pb-1  abtn fw-bold " data-bs-toggle="modal" data-bs-target="#exampleModal1" >2.&ensp;Assignment  &emsp;<i class="fa-solid fa-eye" style="color: #ffffff;"></i></button>
-                   <!-- Modal --></div>
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog modal-xl modal-dialog-scrollable">
-          <div class="modal-content">
-    
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Basic Of C Programming</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" style="height: 700px;">
-                <iframe class="img-fluid text-center h-100 w-100" src="./Axiom VIP Images/assignment basic.pdf"   frameborder="0">
-    
-                </iframe>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    
-            <!-- quiz button -->
+                            </div>
+        
+        
+                            <!--row Div-->
+                        </div>
+                        <!--row End-->
+        
+                        <div class="row m-0 p-0">
+                            <div class="col-xl-7 col-lg-7 d-xl-flex col-md-10  col-sm-6 col-12 ms-xl-5  mt-3 mb-5  ">
+                                
                                 <div class="me-2"> 
-                                    <a class="text-decoration-none" href="#quizcontent" > <button class=" btn py-1 px-4 democode fw-bold  " id="quiz"  onclick="toggleButtons(this, this.nextElementSibling)">Quiz</button></a><br>  
-                                       
-                                    </div>
-                                    <div class="me-2"> 
-                                        <button data-bs-toggle="modal" data-bs-target="#exampleModal1" class=" btn py-1 px-4 democode fw-bold  ">Feedback</button><br>
-                                           
-                                        <div  class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-centered " >
-                                              
-                                                <div class="modal-content" style="background-color: #F5F5F5;" >
-                                     <div class="container">
-                                        <div class="row">
-                                                    <div class="  col position-relative ">
-                                                  <h1 class="modal-title fs-5 text-center mt-3" style="color: #004080;" id="exampleModalLabel">FEEDBACK AND RATING
-                                                <br>
-                                            <img class=" img-fluid h-25 w-25 " src="./Axiom VIP Images/ratings.jpg" alt=""></h1>
-                                        </div></div>
-                                    </div>
-                                        <button  type="button" class="btn-close position-absolute end-0 pe-5 pt-5" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                <div class="modal-body">
-                                                  <form>
-                                                    <div class="mb-3">
-                                                      <textarea class="border border-1 col-12 " name="feedback" id="feedback" cols="60" rows="5" placeholder="Message"></textarea>
-                                                    </div>
-                                                    <div class="mb-3">
-                                                      <h6 style="color:#004080;" class="text-center" >Rate us</h6>
-                                                      <div class="text-center"><i class="fa-solid fa-star fa-lg" style="color: #ffea00;"></i><i class="fa-solid fa-star fa-lg" style="color: #ffea00;"></i><i class="fa-solid fa-star fa-lg" style="color: #ffea00;"></i><i class="fa-solid fa-star fa-lg" style="color: #ffea00;"></i><i class="fa-solid fa-star fa-lg" style="color: #c7c6c6;"></i>
-                                                      </div>
-                            
-                                                    </div>
-                                                  </form>
-                                                </div>
-                                          
-                                                <div class="col text-center mb-4 ">
-                                                  <button type="button" class="btn btn-outline-dark"  data-bs-dismiss="modal">Cancel</button>
-                                                 <button type="button" data-bs-target="#exampleModal22222" data-bs-toggle="modal" style="background-color: #004080;" class="btn text-white"><a class="text-decoration-none text-white" >Submit</a></button>
-                                                </div> 
-                                          
-                                              </div>
-                                            </div>
-                                          </div>
-                                    </div>
-    
-                         </div>
-                         <!-- col end-- -->
+                            <button class="democode btn py-1 px-4 fw-bold  " id="not" onclick="toggleButtons(this, this.nextElementSibling)">Notes</button><br>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="note" class=" btn mt-3 pt-1 pb-1  abtn fw-bold  ">1.&nbsp;Notes&ensp;<a> <i class="fa-solid fa-eye" style="color: #ffffff;"></i></a></button>       
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal3"   id="present" class=" btn mt-3 pt1 pb-1  abtn fw-bold "  >2.&nbsp;Presentation&ensp;<i class="fa-solid fa-eye" style="color: #ffffff;"></i></button>       
                             </div>
-                            <!-- row end-- -->
-                       
-                        <div class="modal fade" id="exampleModal22222" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content" style="background-color: #F5F5F5;">
-                                    <div class="modal-header ">
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog modal-xl modal-dialog-scrollable">
+                                <div class="modal-content">
+                            
+                                    <div class="modal-header">
+                                    <h1 class="modal-title fs-5 " id="exampleModalLabel">Basic Of C Programming</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                    <div class="modal-body">
-    
-                                        <form>
-                                            <div class="text-center">
-                                                <img class="img-fluid  " height="50px" width="50px"
-                                                    src="./Axiom VIP Images/smile-sarcastic.gif" alt="">
-                                            </div>
-                                            <div class="mb-5">
-                                                <h4 class="text-center">Thank You</h4>
-                                                <h6 style="color:#004080;" class="text-center">For reaching out and
-                                                    providing us with valuable feedback .</h6>
-                                                <div class="col text-center mb-4 mt-5">
-    
-                                                    <button type="button" style="background-color: #004080;"
-                                                        class="btn text-white"  data-bs-dismiss="modal">Back</button>
-                                                </div>
-    
-                                            </div>
-                                        </form>
+                                    <div class="modal-body" style="height: 700px;">
+                                        <iframe class="img-fluid text-center h-100 w-100" src="./Axiom VIP Images/basic notes.pdf"   frameborder="0">
+                            
+                                        </iframe>
                                     </div>
-    
+                                    
+                                </div>
                                 </div>
                             </div>
+        
+                            <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog modal-fullscreen modal-dialog-scrollable">
+                                <div class="modal-content">
+                            
+                                    <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Basic Of C Programming</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body" style="height: 700px;">
+                                        <iframe class="img-fluid text-center h-100 w-100" src="./Axiom VIP Images/basic notes.pdf"   frameborder="0">
+                            
+                                        </iframe>
+                                    </div>
+                                    
+                                </div>
+                                </div>
+                            </div>
+                            <!-- </div>
+                
+                            <div class="col col-lg-2 col-md-2 col-sm-8 border "> -->
+                                <div class="me-2">
+                                    <button class="democode btn py-1 px-4  fw-bold   " id="dem" onclick="toggleButtons(this, this.nextElementSibling)">Demo&nbsp;codes</button><br>
+                                <button  id="demo1" data-bs-target="#exampleModal237" data-bs-toggle="modal" class=" btn mt-3 pt-1 pb-1  abtn fw-bold "  >1.&ensp;Demo&nbsp;codes&emsp;<a ><i class="fa-solid fa-eye" style="color: #ffffff;"></i></a></button>       
+                                <button  id="demo2" data-bs-target="#exampleModal236" data-bs-toggle="modal" class=" btn mt-3 pt-1 pb-1 abtn fw-bold "  >1.&ensp;Demo&nbsp;codes&emsp;<i class="fa-solid  fa-eye" style="color: #ffffff;"></i></button>       
+                                </div>
+                            <div class="modal fade" id="exampleModal236" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog modal-xl modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                
+                                        <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Basic Of C Programming</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body" style="height: 700px;">
+                                            <iframe class="img-fluid text-center h-100 w-100" src="./Axiom VIP Images/ibill.c"   frameborder="0">
+                                
+                                            </iframe>
+                                        </div>
+                                        
+                                    </div>
+                                    </div>
+                                </div>
+            
+                                <div class="modal fade" id="exampleModal237" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog modal-xl modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                
+                                        <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Basic Of C Programming</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body" style="height: 700px;">
+                                            <iframe class="img-fluid text-center h-100 w-100" src="./Axiom VIP Images/basic demo code 2.C"   frameborder="0">
+                                
+                                            </iframe>
+                                        </div>
+                                        
+                                    </div>
+                                    </div>
+                                </div>
+
+                                    <div class="me-2">                    <button class=" btn py-1 px-4 democode fw-bold" id="assi" onclick="toggleButtons(this, this.nextElementSibling)">Assignments</button><br>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"  id="assi1" class=" btn mt-3 pt-1 pb-1  abtn fw-bold "  >1.&ensp;Assignment &emsp;<i class="fa-solid fa-eye" style="color: #ffffff;"></i></button>       
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" id="assi2" class=" btn mt-3 pt1 pb-1  abtn fw-bold " data-bs-toggle="modal" data-bs-target="#exampleModal1" >2.&ensp;Assignment  &emsp;<i class="fa-solid fa-eye" style="color: #ffffff;"></i></button>
+                    <!-- Modal --></div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+        
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Basic Of C Programming</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="height: 700px;">
+                    <iframe class="img-fluid text-center h-100 w-100" src="./Axiom VIP Images/assignment basic.pdf"   frameborder="0">
+        
+                    </iframe>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+        
+                <!-- quiz button -->
+                                    <div class="me-2"> 
+                                <a  href="#quizcontent">    <button class=" btn py-1 px-4 democode fw-bold  " id="quiz"  onclick="toggleButtons(this, this.nextElementSibling)">Quiz</button> </a><br>  
+                                
+                                        </div>
+                                        <div class="me-2"> 
+                                            <button data-bs-toggle="modal" data-bs-target="#exampleModal1" class=" btn py-1 px-4 democode fw-bold  ">Feedback</button><br>
+                                            <!-- modal for feedback -->
+                                            <div  class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered " >
+                                                
+                                                    <div class="modal-content" style="background-color: #F5F5F5;" >
+                                        <div class="container">
+                                            <div class="row">
+                                                        <div class="  col position-relative ">
+                                                    <h1 class="modal-title fs-5 text-center mt-3" style="color: #004080;" id="exampleModalLabel">FEEDBACK AND RATING
+                                                    <br>
+                                                <img class=" img-fluid h-25 w-25 " src="./Axiom VIP Images/ratings.jpg" alt=""></h1>
+                                            </div></div>
+                                        </div>
+                                            <button  type="button" class="btn-close position-absolute end-0 pe-5 pt-5" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    <div class="modal-body">
+                                                    <form>
+                                                        <div class="mb-3">
+                                                        <textarea class="border border-1 col-12 " name="feedback" id="feedback" cols="60" rows="5" placeholder="Message"></textarea>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                        <h6 style="color:#004080;" class="text-center" >Rate us</h6>
+                                                        <div class="text-center"><i class="fa-solid fa-star fa-lg" style="color: #ffea00;"></i><i class="fa-solid fa-star fa-lg" style="color: #ffea00;"></i><i class="fa-solid fa-star fa-lg" style="color: #ffea00;"></i><i class="fa-solid fa-star fa-lg" style="color: #ffea00;"></i><i class="fa-solid fa-star fa-lg" style="color: #c7c6c6;"></i>
+                                                        </div>
+                                
+                                                        </div>
+                                                    </form>
+                                                    </div>
+                                            
+                                                    <div class="col text-center mb-4 ">
+                                                    <button type="button" class="btn btn-outline-dark"  data-bs-dismiss="modal">Cancel</button>
+                                                    <button type="button" data-bs-target="#exampleModal22222" data-bs-toggle="modal" style="background-color: #004080;" class="btn text-white"><a class="text-decoration-none text-white" >Submit</a></button>
+                                                    </div> 
+                                            
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                            </div>
+                            <!-- col end-- -->
+                                </div>
+                                <!-- row end-- -->
+                        <!-- after feedback is submited the modal will appear -->
+                            <div class="modal fade" id="exampleModal22222" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content" style="background-color: #F5F5F5;">
+                                        <div class="modal-header ">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+        
+                                            <form>
+                                                <div class="text-center">
+                                                    <img class="img-fluid  " height="50px" width="50px"
+                                                        src="./Axiom VIP Images/smile-sarcastic.gif" alt="">
+                                                </div>
+                                                <div class="mb-5">
+                                                    <h4 class="text-center">Thank You</h4>
+                                                    <h6 style="color:#004080;" class="text-center">For reaching out and
+                                                        providing us with valuable feedback .</h6>
+                                                    <div class="col text-center mb-4 mt-5">
+        
+                                                        <button type="button" style="background-color: #004080;"
+                                                            class="btn text-white"  data-bs-dismiss="modal">Back</button>
+                                                    </div>
+        
+                                                </div>
+                                            </form>
+                                        </div>
+        
+                                    </div>
+                                </div>
+                            </div>
+        
                         </div>
-    
-                    </div>
-                    <div class="overflow-scroll mb-5 " style="height:500px;"  hidden id="quizcontent">
-    
-                        <div style="color: #004080;" class="col-12 mt-5 fw-bold mb-3">BASIC OF C QUIZ</div>
-                    
+                        <div class="overflow-scroll mb-5 " style="height:500px;"  hidden id="quizcontent">
+        
+                            <div style="color: #004080;" class="col-12 mt-5 fw-bold mb-3">BASIC OF C QUIZ</div>
                         
-                        <form  action="" >
-                            <div class="col-lg-6 col-md-6 col-sm-12 ">
-                                
-                                <p>1. What is the sizeof(char) in a 32-bit C compiler? </p>
-                                <div class="form-check shadow  py-2 my-2 "> 
-                                    <input class="form-check-input  mx-1 pe-auto " name="aa" type="radio" value="" id="flexradiocc" required>
-                                    <label class="form-check-label  mx-1" for="flexradiocc">
-                                        2 Bytes
-                                    </label>
-                                  </div>
-                                <div class="form-check shadow      py-2 my-2">
-                                     <input class="form-check-input mx-1" name="aa" type="radio" value="" id="flexradiobd" required >    <!--  <div style="overflow-y: scroll;height:400px;">  -->
-                               
-                                    <label class="form-check-label mx-1" for="flexradiobd">
-                                       1 Bytes
-                                    </label>
-                                  </div>
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="aa" mx-1 type="radio" value="" id="flexradiobb" required>
-                                    <label class="form-check-label mx-1" for="flexradiobb">
-                                     1 Bit
-                                    </label>
-                                  </div>
-                                
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="aa" type="radio" value="" id="flexradioaa" required>
-                                    <label class="form-check-label mx-1" for="flexradioaa">
-                                        2 Bits
-                                    </label>
-                                  </div>
-                                
-                            </div>
                             
-                            <div class="col-lg-6 col-md-6 col-sm-12  mt-5">
-                               
-                                <p>2. What is a Correct Syntax to output "Hello World" in C? </p>
-                                <div class="form-check shadow  py-2 my-2"> 
-                                    <input class="form-check-input   mx-1 " name="ab" type="radio" value="" id="1" required>
-                                    <label class="form-check-label  mx-1" for="1">
-                                        System.out.printline("Hello World");
-                                    </label>
-                                  </div>
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="ab" type="radio" value="" id="2" required>
-                                    <label class="form-check-label mx-1" for="2">
-                                        System.out.printline("Hello World");
-                                    </label>
-                                  </div>
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="ab" type="radio" value="" id="3" required>
-                                    <label class="form-check-label mx-1" for="3">
-                                        System.out.printline("Hello World");
-                                    </label>
-                                  </div>
+                            <form  action="" >
+                                <div class="col-lg-6 col-md-6 col-sm-12 ">
+                                    
+                                    <p>1. What is the sizeof(char) in a 32-bit C compiler? </p>
+                                    <div class="form-check shadow  py-2 my-2 "> 
+                                        <input class="form-check-input  mx-1 pe-auto " name="aa" type="radio" value="" id="flexradiocc" required>
+                                        <label class="form-check-label  mx-1" for="flexradiocc">
+                                            2 Bytes
+                                        </label>
+                                    </div>
+                                    <div class="form-check shadow py-2 my-2">
+                                        <input class="form-check-input mx-1" name="aa" type="radio" value="" id="flexradiobd" required >    <!--  <div style="overflow-y: scroll;height:400px;">  -->
                                 
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="ab" type="radio" value="" id="4" required>
-                                    <label class="form-check-label mx-1" for="4">
-                                        System.out.printline("Hello World");
-                                    </label>
-                                  </div>
+                                        <label class="form-check-label mx-1" for="flexradiobd">
+                                        1 Byte
+                                        </label>
+                                    </div>
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="aa" mx-1 type="radio" value="" id="flexradiobb" required>
+                                        <label class="form-check-label mx-1" for="flexradiobb">
+                                        1 Bit
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="aa" type="radio" value="" id="flexradioaa" required>
+                                        <label class="form-check-label mx-1" for="flexradioaa">
+                                            2 Bits
+                                        </label>
+                                    </div>
+                                    
+                                </div>
                                 
-                            </div>
-                            
-                            <div class="col-lg-6 col-md-6 col-sm-12  mt-5">
-                               
-                                <p>3. Who is the father of C language?
-                                </p>
-                                <div class="form-check shadow  py-2 my-2"> 
-                                    <input class="form-check-input mx-1   " name="c" type="radio" value="" id="a1" required>
-                                    <label class="form-check-label mx-1 " for="a1">
-                                        Steve Jobs
-                                    </label>
-                                  </div>
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="c" type="radio" value="" id="a2" required>
-                                    <label class="form-check-label mx-1" for="a2">
-                                        James Gosling
-                                    </label>
-                                  </div>
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="c" type="radio" value="" id="a3" required>
-                                    <label class="form-check-label mx-1" for="a3">
-                                        Dennis Ritchie
-                                    </label>
-                                  </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12  mt-5">
                                 
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="c" type="radio" value="" id="a4" required>
-                                    <label class="form-check-label mx-1" for="a4">
-                                        Rasmus Lerdorf
-                                    </label>
-                                  </div>
+                                    <p>2. What is a Correct Syntax to output "Hello World" in C? </p>
+                                    <div class="form-check shadow  py-2 my-2"> 
+                                        <input class="form-check-input   mx-1 " name="ab" type="radio" value="" id="1" required>
+                                        <label class="form-check-label  mx-1" for="1">
+                                            printf("hii");
+                                        </label>
+                                    </div>
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="ab" type="radio" value="" id="2" required>
+                                        <label class="form-check-label mx-1" for="2">
+                                            printf("Hello World");
+                                        </label>
+                                    </div>
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="ab" type="radio" value="" id="3" required>
+                                        <label class="form-check-label mx-1" for="3">
+                                            System.out.printline("Hello World");
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="ab" type="radio" value="" id="4" required>
+                                        <label class="form-check-label mx-1" for="4">
+                                            System.out.printline("Hello World");
+                                        </label>
+                                    </div>
+                                    
+                                </div>
                                 
-                            </div>
-                            
-                            <div class="col-lg-6 col-md-6 col-sm-12  mt-5">
-                              
-                                <p>4. Which of the following is not a valid C variable name? </p>
-                                <div class="form-check shadow  py-2 my-2"> 
-                                    <input class="form-check-input mx-1   " name="d" type="radio" value="" id="z1"required >
-                                    <label class="form-check-label  mx-1" for="z1">
-                                        int number;
-                                    </label>
-                                  </div>
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="d" type="radio" value="" id="z2" required>
-                                    <label class="form-check-label mx-1" for="z2">
-                                        float rate;
-                                    </label>
-                                  </div>
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="d" type="radio" value="" id="z3" required>
-                                    <label class="form-check-label mx-1" for="z3">
-                                        int variable_count;
-                                    </label>
-                                  </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12  mt-5">
                                 
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="d" type="radio" value="" id="z4" required>
-                                    <label class="form-check-label mx-1" for="z4">
-                                        int $main;
-                                    </label>
-                                  </div>
+                                    <p>3. Who is the father of C language?
+                                    </p>
+                                    <div class="form-check shadow  py-2 my-2"> 
+                                        <input class="form-check-input mx-1   " name="c" type="radio" value="" id="a1" required>
+                                        <label class="form-check-label mx-1 " for="a1">
+                                            Steve Jobs
+                                        </label>
+                                    </div>
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="c" type="radio" value="" id="a2" required>
+                                        <label class="form-check-label mx-1" for="a2">
+                                            James Gosling
+                                        </label>
+                                    </div>
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="c" type="radio" value="" id="a3" required>
+                                        <label class="form-check-label mx-1" for="a3">
+                                            Dennis Ritchie
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="c" type="radio" value="" id="a4" required>
+                                        <label class="form-check-label mx-1" for="a4">
+                                            Rasmus Lerdorf
+                                        </label>
+                                    </div>
+                                    
+                                </div>
                                 
-                            </div>
-                            
-                            <div class="col-lg-6 col-md-6 col-sm-12  mt-5">
+                                <div class="col-lg-6 col-md-6 col-sm-12  mt-5">
                                 
-                                <p>5. What is short int in C programming?</p>
-                                <div class="form-check shadow  py-2 my-2"> 
-                                    <input class="form-check-input  mx-1  " name="e" type="radio" value="" id="b1" required>
-                                    <label class="form-check-label  mx-1" for="b1">
-                                        The basic data type of C
-                                    </label>
-                                  </div> 
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="e" type="radio" value="" id="b2" required>
-                                    <label class="form-check-label mx-1" for="b2">
-                                        Qualifier
-                            
-                                    </label>
-                                  </div>
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1"name="e" type="radio" value="" id="b3" required>
-                                    <label class="form-check-label mx-1" for="b3">
-                                        Short is the qualifier and int is the basic data type
-                                    </label>
-                                  </div>
+                                    <p>4. Which of the following is not a valid C variable name? </p>
+                                    <div class="form-check shadow  py-2 my-2"> 
+                                        <input class="form-check-input mx-1   " name="d" type="radio" value="" id="z1"required >
+                                        <label class="form-check-label  mx-1" for="z1">
+                                            int number;
+                                        </label>
+                                    </div>
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="d" type="radio" value="" id="z2" required>
+                                        <label class="form-check-label mx-1" for="z2">
+                                            float rate;
+                                        </label>
+                                    </div>
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="d" type="radio" value="" id="z3" required>
+                                        <label class="form-check-label mx-1" for="z3">
+                                            int variable_count;
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="d" type="radio" value="" id="z4" required>
+                                        <label class="form-check-label mx-1" for="z4">
+                                            int $main;
+                                        </label>
+                                    </div>
+                                    
+                                </div>
                                 
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="e" type="radio" value="" id="b4" required>
-                                    <label class="form-check-label mx-1" for="b4">
-                                        All of the mentioned
-                                    </label>
-                                  </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12  mt-5">
+                                    
+                                    <p>5. What is short int in C programming?</p>
+                                    <div class="form-check shadow  py-2 my-2"> 
+                                        <input class="form-check-input  mx-1  " name="e" type="radio" value="" id="b1" required>
+                                        <label class="form-check-label  mx-1" for="b1">
+                                            The basic data type of C
+                                        </label>
+                                    </div> 
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="e" type="radio" value="" id="b2" required>
+                                        <label class="form-check-label mx-1" for="b2">
+                                            Qualifier
                                 
-                            </div>
-                            
-                            <div class="col-lg-6 col-md-6 col-sm-12  mt-5">
+                                        </label>
+                                    </div>
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1"name="e" type="radio" value="" id="b3" required>
+                                        <label class="form-check-label mx-1" for="b3">
+                                            Short is the qualifier and int is the basic data type
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="e" type="radio" value="" id="b4" required>
+                                        <label class="form-check-label mx-1" for="b4">
+                                            All of the mentioned
+                                        </label>
+                                    </div>
+                                    
+                                </div>
                                 
-                                <p>6. Which keyword is used to prevent any changes in the variable within a C program?
-                                </p>
-                                <div class="form-check shadow  py-2 my-2"> 
-                                    <input class="form-check-input   mx-1 " name="f" type="radio" value="" id="c1" required>
-                                    <label class="form-check-label  mx-1" for="c1">
-                                        immutable
-                                    </label>
-                                  </div>
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="f" type="radio" value="" id="c2" required>
-                                    <label class="form-check-label mx-1" for="c2">
-                                        mutable
-                                    </label>
-                                  </div>
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="f" type="radio" value="" id="c3" required>
-                                    <label class="form-check-label mx-1" for="c3">
-                                        const
-                                    </label>
-                                  </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12  mt-5">
+                                    
+                                    <p>6. Which keyword is used to prevent any changes in the variable within a C program?
+                                    </p>
+                                    <div class="form-check shadow  py-2 my-2"> 
+                                        <input class="form-check-input   mx-1 " name="f" type="radio" value="" id="c1" required>
+                                        <label class="form-check-label  mx-1" for="c1">
+                                            immutable
+                                        </label>
+                                    </div>
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="f" type="radio" value="" id="c2" required>
+                                        <label class="form-check-label mx-1" for="c2">
+                                            mutable
+                                        </label>
+                                    </div>
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="f" type="radio" value="" id="c3" required>
+                                        <label class="form-check-label mx-1" for="c3">
+                                            const
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="f" type="radio" value="" id="c4" required>
+                                        <label class="form-check-label mx-1" for="c4">
+                                            volatile
+                                        </label>
+                                    </div>
+                                    
+                                </div>
                                 
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="f" type="radio" value="" id="c4" required>
-                                    <label class="form-check-label mx-1" for="c4">
-                                        volatile
-                                    </label>
-                                  </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12  mt-5">
                                 
-                            </div>
-                            
-                            <div class="col-lg-6 col-md-6 col-sm-12  mt-5">
-                               
-                                <p>7. What is the result of logical or relational expression in C?</p>
-                                <div class="form-check shadow  py-2 my-2"> 
-                                    <input class="form-check-input  mx-1  " name="g" type="radio" value="" id="d1" required>
-                                    <label class="form-check-label  mx-1" for="d1">
-                                        True or False
-                                    </label>
-                                  </div>
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="g" type="radio" value="" id="d2" required>
-                                    <label class="form-check-label mx-1" for="d2">
-                                    0 or 1
-                                    </label>
-                                  </div>
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="g" type="radio" value="" id="d3" required>
-                                    <label class="form-check-label mx-1" for="d3">
-                                        0 if an expression is false and any positive number if an expression is true
-                                    </label>
-                                  </div>
+                                    <p>7. What is the result of logical or relational expression in C?</p>
+                                    <div class="form-check shadow  py-2 my-2"> 
+                                        <input class="form-check-input  mx-1  " name="g" type="radio" value="" id="d1" required>
+                                        <label class="form-check-label  mx-1" for="d1">
+                                            True or False
+                                        </label>
+                                    </div>
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="g" type="radio" value="" id="d2" required>
+                                        <label class="form-check-label mx-1" for="d2">
+                                        0 or 1
+                                        </label>
+                                    </div>
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="g" type="radio" value="" id="d3" required>
+                                        <label class="form-check-label mx-1" for="d3">
+                                            0 if an expression is false and any positive number if an expression is true
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="g" type="radio" value="" id="d4" required>
+                                        <label class="form-check-label mx-1" for="d4">
+                                            None of the mentioned
+                                        </label>
+                                    </div>
+                                    
+                                </div>
                                 
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="g" type="radio" value="" id="d4" required>
-                                    <label class="form-check-label mx-1" for="d4">
-                                        None of the mentioned
-                                    </label>
-                                  </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12  mt-5">
+                                    
+                                    <p>8.Which of the following typecasting is accepted by C language?</p>
+                                    <div class="form-check shadow  py-2 my-2"> 
+                                        <input class="form-check-input  mx-1  " name="h" type="radio" value="" id="e1" required>
+                                        <label class="form-check-label  mx-1" for="e1">
+                                            Widening conversions
+                                        </label>
+                                    </div>
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="h" type="radio" value="" id="e2" required>
+                                        <label class="form-check-label mx-1" for="e2">
+                                            Narrowing conversions
+                                        </label>
+                                    </div>
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="h" type="radio" value="" id="e3" required>
+                                        <label class="form-check-label mx-1" for="e3">
+                                            Widening & Narrowing conversions
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="h" type="radio" value="" id="e4" required>
+                                        <label class="form-check-label mx-1" for="e4">
+                                            None of the mentioned
+                                        </label>
+                                    </div>
+                                    
+                                </div>
                                 
-                            </div>
-                            
-                            <div class="col-lg-6 col-md-6 col-sm-12  mt-5">
+                                <div class="col-lg-6 col-md-6 col-sm-12  mt-5">
+                                    
+                                    <p>9. What is an example of iteration in C?</p>
+                                    <div class="form-check shadow  py-2 my-2"> 
+                                        <input class="form-check-input  mx-1  " name="i" type="radio" value="" id="f1" required>
+                                        <label class="form-check-label  mx-1" for="f1">
+                                            for
+                                        </label>
+                                    </div>
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="i" type="radio" value="" id="f2" required>
+                                        <label class="form-check-label mx-1" for="f2">
+                                            while
+                                        </label>
+                                    </div>
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="i" type="radio" value="" id="f3"required>
+                                        <label class="form-check-label mx-1" for="f3">
+                                        do-while
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="i" type="radio" value="" id="f4"required>
+                                        <label class="form-check-label mx-1" for="f4">
+                                            all of the mentioned
+                                        </label>
+                                    </div>
+                                    
+                                </div>
                                 
-                                <p>8.Which of the following typecasting is accepted by C language?</p>
-                                <div class="form-check shadow  py-2 my-2"> 
-                                    <input class="form-check-input  mx-1  " name="h" type="radio" value="" id="e1" required>
-                                    <label class="form-check-label  mx-1" for="e1">
-                                        Widening conversions
-                                    </label>
-                                  </div>
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="h" type="radio" value="" id="e2" required>
-                                    <label class="form-check-label mx-1" for="e2">
-                                        Narrowing conversions
-                                    </label>
-                                  </div>
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="h" type="radio" value="" id="e3" required>
-                                    <label class="form-check-label mx-1" for="e3">
-                                         Widening & Narrowing conversions
-                                    </label>
-                                  </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12  mt-5">
+                                    
+                                    <p>10. Functions in C Language are always _________ </p>
+                                    <div class="form-check shadow  py-2 my-2"> 
+                                        <input class="form-check-input  mx-1  " name="j" type="radio" value="" id="g1"required>
+                                        <label class="form-check-label mx-1 " for="g1">
+                                            Internal
+                                        </label>
+                                    </div>
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="j" type="radio" value="" id="g2"required>
+                                        <label class="form-check-label mx-1" for="g2">
+                                            External 
+                                        </label>
+                                    </div>
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="j" type="radio" value="" id="g3"required>
+                                        <label class="form-check-label mx-1" for="g3">
+                                            Both Internal and External        </label>
+                                    </div>
+                                    
+                                    <div class="form-check shadow  py-2 my-2">
+                                        <input class="form-check-input mx-1" name="j" type="radio" value="" id="g4"required>
+                                        <label class="form-check-label mx-1" for="g4">
+                                            External and Internal are not valid terms for functions
+                                        </label>
+                                    </div>
+                                    
+                                </div>
                                 
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="h" type="radio" value="" id="e4" required>
-                                    <label class="form-check-label mx-1" for="e4">
-                                        None of the mentioned
-                                    </label>
-                                  </div>
-                                
-                            </div>
-                            
-                            <div class="col-lg-6 col-md-6 col-sm-12  mt-5">
-                                
-                                <p>9. What is an example of iteration in C?</p>
-                                <div class="form-check shadow  py-2 my-2"> 
-                                    <input class="form-check-input  mx-1  " name="i" type="radio" value="" id="f1" required>
-                                    <label class="form-check-label  mx-1" for="f1">
-                                        for
-                                    </label>
-                                  </div>
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="i" type="radio" value="" id="f2" required>
-                                    <label class="form-check-label mx-1" for="f2">
-                                        while
-                                    </label>
-                                  </div>
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="i" type="radio" value="" id="f3"required>
-                                    <label class="form-check-label mx-1" for="f3">
-                                       do-while
-                                    </label>
-                                  </div>
-                                
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="i" type="radio" value="" id="f4"required>
-                                    <label class="form-check-label mx-1" for="f4">
-                                        all of the mentioned
-                                    </label>
-                                  </div>
-                                
-                            </div>
-                            
-                            <div class="col-lg-6 col-md-6 col-sm-12  mt-5">
-                                
-                                <p>10. Functions in C Language are always _________ </p>
-                                <div class="form-check shadow  py-2 my-2"> 
-                                    <input class="form-check-input  mx-1  " name="j" type="radio" value="" id="g1"required>
-                                    <label class="form-check-label mx-1 " for="g1">
-                                        Internal
-                                    </label>
-                                  </div>
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="j" type="radio" value="" id="g2"required>
-                                    <label class="form-check-label mx-1" for="g2">
-                                        External 
-                                    </label>
-                                  </div>
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="j" type="radio" value="" id="g3"required>
-                                    <label class="form-check-label mx-1" for="g3">
-                                        Both Internal and External        </label>
-                                  </div>
-                                
-                                <div class="form-check shadow  py-2 my-2">
-                                    <input class="form-check-input mx-1" name="j" type="radio" value="" id="g4"required>
-                                    <label class="form-check-label mx-1" for="g4">
-                                        External and Internal are not valid terms for functions
-                                    </label>
-                                  </div>
-                                
-                            </div>
-                            
-                            
-                            <div class="col-lg-6 col-md-6 col-sm-12 text-center mb-5 mt-5 px-auto ">
-                                <!-- <button type="button" style="color: #004080;" class="btn ">Retry</button> -->
-                               <button type="submit" data-bs-target="#exampleModal235" data-bs-toggle="modal" style="background-color: #004080;" class="btn text-white"><a class="text-decoration-none text-white" >Submit</a></button>
-                              </div> 
+        
+            
+                                </form>
+                                <form  action="javascript:void(0);"  onsubmit="showScoreModal()" >
+                                    <div class="col-lg-6 col-md-6 col-sm-12 text-center mb-5 mt-5 px-auto ">
+                                        <!-- <button type="button" style="color: #004080;" class="btn ">Retry</button> -->
+                                    <button type="submit" data-bs-target="#exampleModal235" data-bs-toggle="modal" style="background-color: #004080;" class="btn text-white">Submit</button>
+                                    </div> 
+                                    </form> 
+                                <div class="modal fade" id="scoreModal" tabindex="-1" aria-labelledby="scoreModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content" style="background-color: #F5F5F5;">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="scoreModalLabel">Your Score</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="text-center">
+                                                    <img class="img-fluid" height="50px" width="50px" src="./Axiom VIP Images/smile-sarcastic.gif" alt="">
+                                                </div>
+                                                <div class="mb-5 w-25 mx-auto">
+                                                    <h4 class="text-center">Your Score</h4>
+                                                    <h4 class="shadow text-center"><span id="userScore" class="text-success">--</span></h4>
+                                                    <h6 style="color:#004080;" class="text-center"></h6>
+                                                    <div class="col text-center mb-4 mt-5">
+                                                        <input type="button" style="background-color: #004080;" class="btn text-white" data-bs-dismiss="modal" value="Back" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
         
         
-                                      
-        
-                            </form>
-                            <div class="modal fade" id="exampleModal25" tabindex="-1" aria-labelledby="exampleModalLabel"
-                              aria-hidden="true">
-                              <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content" style="background-color: #F5F5F5;">
-                                      <div class="modal-header ">
-                                          <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                              aria-label="Close"></button>
-                                      </div>
-                                      <div class="modal-body">
-        
-                                          <form>
-                                              <div class="text-center">
-                                                  <img class="img-fluid  " height="50px" width="50px"
-                                                      src="./Axiom VIP Images/smile-sarcastic.gif" alt="">
-                                              </div>
-                                              <div class="mb-5 w-25 mx-auto">
-                                                  <h4 class="text-center">Your Score</h4>
-                                                  <h4 class=" shadow text-center"><span class="text-success"> 9</span>/10</h4>
-                                                  
-                                                  <h6 style="color:#004080;" class="text-center"></h6>
-                                                  <div class="col text-center mb-4 mt-5">
-        
-                                                      <button type="button" style="background-color: #004080;"
-                                                          class="btn text-white"><a class="text-decoration-none text-white"
-                                                              target="_self"
-                                                              href="">Back</a></button>
-                                                  </div>
-        
-                                              </div>
-                                          </form>
-                                      </div>
-        
-                                  </div>
-                              </div>
-                          </div>
-
-                    </div>
-    
-    
-                    </div>
+                        </div>
+        </div>
     </div>
-</div>
-<!-- @endsection  Footer Area -->
-<div class="position-fixed w-100 fixed-bottom " style="background-color: #004080; text-align: center;height: 40px;padding-top: 8px; position: static;">
-    <p>
-      <a href="#"  style="text-underline-offset: none;color: #ffff;" >Developed by Axiom TechGuru Pvt. Ltd.</a>
-    </p>
+
+    <div class="container">
+  <div class="row">
+      <div class="col-12">
+          <button class="chatbot-toggler">
+              <!-- <span class="material-symbols-outlined">mode_comment</span> -->
+              <iconify-icon class="material-symbols-outlined"
+                  icon="ph:chats-teardrop-bold"></iconify-icon>
+              <span class="material-symbols-outlined"></span>
+          </button>
+          <div class="chatbot">
+              <header>
+                  <h2>Chatbot</h2>
+                  <span
+                      class="close-btn material-symbols-outlined">close</span>
+              </header>
+              <ul class="chatbox">
+                  <li class="chat incoming">
+                      <span class="material-symbols-outlined">smart_toy</span>
+                      <p>Hi There &#128075; <br> how can i help you</p>
+                  </li>
+              </ul>
+              <div class="chat-input">
+                  <textarea placeholder="Enter a message..."
+                      required></textarea>
+                  <span id="send-btn"
+                      class="material-symbols-outlined">send</span>
+              </div>
+          </div>
+      </div>
   </div>
-<script>
-        document.addEventListener("contextmenu", function (e) {
-            e.preventDefault();
-        }, false);
+</div>
+    <!-- @endsection  Footer Area -->
+    <div class="position-fixed w-100 fixed-bottom " style="background-color: #004080; text-align: center;height: 40px;padding-top: 8px; position: static;">
+        <p class="text-white">
+        Developed by <a href="https://www.axiomtechguru.com/" target="_blank" style=" color: #ffff;" >Axiom TechGuru Pvt. Ltd.</a>
+        </p>
+    </div>
+    <script>
+            document.addEventListener("contextmenu", function (e) {
+                e.preventDefault();
+            }, false);
 
-        function disableContextMenu()
-  {
-    window.frames["fraDisabled"].document.oncontextmenu = function(){alert("Right Click disabled!"); return false;};   
-    // Or use this
-    // document.getElementById("fraDisabled").contentWindow.document.oncontextmenu = function(){alert("Right Click disabled!"); return false;};;    
-  }  
- 
-</script>
- 
+            function disableContextMenu()
+    {
+        window.frames["fraDisabled"].document.oncontextmenu = function(){alert("Right Click disabled!"); return false;};   
+        // Or use this
+        // document.getElementById("fraDisabled").contentWindow.document.oncontextmenu = function(){alert("Right Click disabled!"); return false;};;    
+    }  
+    
+    </script>
+              <script
+              src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+          <!-- Chatbox Script End -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    
 
-</body>
-</html>
+    </body>
+    </html>

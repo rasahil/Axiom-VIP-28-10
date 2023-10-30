@@ -1,9 +1,15 @@
-/*<!--------------Chatbox CSS start-------------->*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
 body{
-    background: #E3F2FD;
- }
- .chatbot-toggler {
+   background: #E3F2FD; 
+}
+.chatbot-toggler {
     position: fixed;
     right: 10px;
     bottom: 50px;
@@ -17,20 +23,24 @@ body{
     justify-content: center;
     outline: none;
     cursor: pointer;
+    
     border-radius: 50%;
     transition: all 0.1s ease;
 }
+.chatbot-toggler:hover{
+background: #004080;
+color: white;
+}
 .show-chatbot .chatbot-toggler{
-     transform: rotate(90deg);
-}  
- /* icon move to 90deg */ 
+    transform: rotate(90deg);
+}
 .chatbot-toggler span {
    position: absolute;
 }
 .show-chatbot .chatbot-toggler span:first-child,
 .chatbot-toggler span:last-child{
     opacity: 0;
-}
+} 
 .show-chatbot .chatbot-toggler span:last-child {
     opacity: 1;
 }
@@ -38,7 +48,7 @@ body{
     position: fixed;
     right: 40px;
     bottom: 100px;
-    width: 300px; /* width of chatbot */
+    width: 420px;
     transform: scale(0.5);
     opacity: 0;
     pointer-events: none;/* imp */
@@ -67,7 +77,7 @@ body{
 }
 .chatbot header span{
     position: absolute;
-    right: 20px;
+    right: 20px;       /* responsive*/
     top: 30px;
     color: #fff;
     cursor: pointer;
@@ -75,7 +85,7 @@ body{
     transform: translateY(-50%);
 }
 .chatbot .chatbox{
-    height: 300px; /*hight of chatbox*/
+    height: 450px;/*hight of chatbox*/
     overflow-x: auto;
     padding: 30px 20px 100px;
 }
@@ -132,8 +142,7 @@ body{
     outline: none;
     max-height: 180px;
     font-size: 0.95rem;
-    resize:none ;
-    padding: 16px 15px 16px 0;
+    resize:none ;padding: 16px 15px 16px 0;
 }
 .chat-input span {
     align-self: flex-end;
@@ -151,9 +160,9 @@ body{
 @media(max-width: 490px){
     .chatbot{
         right: 10px;
-        bottom: 25px;
-        width: 300px;
-        height: 350px;
+        bottom: 10px;
+        width: 70%;
+        height: 60%;
         border-radius: 10px;
     }
     .chatbot .chatbox{
@@ -163,13 +172,4 @@ body{
         display: block;
     }
 }
-@media(max-width: 380px){
-  .chatbot{
-        right: 10px;
-        bottom: 25px;
-        width: 250px;
-        height: 290px;
-        border-radius: 10px;
-    }
-}
-   /*  <!-------------Chatbox CSS End------------>*/
+

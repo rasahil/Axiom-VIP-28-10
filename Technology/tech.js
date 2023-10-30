@@ -71,7 +71,8 @@ listItems.forEach(item => {
         item.classList.add("active");
     });
 });
-    
+ 
+
 function showDropdown(button) {
             // Remove the 'clicked' class from all buttons
             const buttons = document.querySelectorAll('button');
@@ -83,4 +84,63 @@ function showDropdown(button) {
             button.classList.add('clicked');
         }
      
-     
+
+
+
+    // code for quiz section
+        function showScoreModal() {
+            // Check if all questions have been answered
+            var question1 = document.querySelector('input[name="aa"]:checked');
+            var question2 = document.querySelector('input[name="ab"]:checked');
+            var question3 = document.querySelector('input[name="c"]:checked');
+            var question4 = document.querySelector('input[name="d"]:checked');
+            var question5 = document.querySelector('input[name="e"]:checked');
+            var question6 = document.querySelector('input[name="f"]:checked');
+            var question7 = document.querySelector('input[name="g"]:checked');
+            var question8 = document.querySelector('input[name="h"]:checked');
+            var question9 = document.querySelector('input[name="i"]:checked');
+            var question10 = document.querySelector('input[name="j"]:checked');
+            
+            if (question1 &&question2 &&question3 &&question4 &&question5 &&question6 &&question7 &&question8 && question9 && question10) {
+                // Calculate the score and update the modal
+                var score = calculateScore(); // Implement your score calculation logic
+                document.getElementById('userScore').textContent = score + '/10';
+
+                // Show the modal
+                var modal = new bootstrap.Modal(document.getElementById('scoreModal'));
+                modal.show();
+            } else {
+                // Show a validation message to select answers for all questions
+                alert("Please answer all questions before submitting.");
+            }
+        }
+
+        // Implement your score calculation logic here
+        function calculateScore() {
+            var score = 0; // Initialize the score to 0
+        
+            // Define the correct answers for each question
+            var correctAnswers = {
+                'aa':'flexradiobd',
+                'ab':'2',
+                'c':'a3',
+                'd':'z4',
+                'e':'b3',
+                'f':'c3',
+                'g':'d3',
+                'h': 'e3', // Correct answer for the first question
+                'i': 'f4', // Correct answer for the second question
+                'j': 'g3'  // Correct answer for the third question
+            };
+        
+            // Loop through the questions and compare user answers with correct answers
+            for (var question in correctAnswers) {
+                var userAnswer = document.querySelector('input[name="' + question + '"]:checked').id;
+                if (userAnswer === correctAnswers[question]) {
+                    score++;
+                }
+            }
+        
+            return score; // Return the calculated score
+        }
+        
